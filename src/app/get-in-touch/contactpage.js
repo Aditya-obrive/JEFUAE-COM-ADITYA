@@ -1636,11 +1636,11 @@ export function OfficeLocations() {
                             >
                                 {office.address}
                             </p>
-                            <p className={`text-sm sm:text-base font-light leading-6 text-[#C02429] mb-1
+                            <p className={`text-sm sm:text-base font-light leading-6 text-[#FF0000] mb-1
                                 }`}>
                                 Ph. No: {office.phone}
                             </p>
-                            <p className="text-sm sm:text-base font-light leading-6 text-[#C02429]">
+                            <p className="text-sm sm:text-base font-light leading-6 text-[#FF0000]">
                                 Email:{' '}
                                 <a href={`mailto:${office.email}`} className="underline">
                                     {office.email}

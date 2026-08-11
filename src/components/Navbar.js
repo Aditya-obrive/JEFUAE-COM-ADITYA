@@ -141,7 +141,7 @@ const Navbar = () => {
                         <img
                             loading="lazy"
                             // src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                            src="/NavLogo/JEFLogo.png"
+                            src="/NavLogo/JEFLogo.svg"
                             alt="JEF Company logo"
                             className="object-contain w-[7rem] lg:w-[7rem] 2xl:w-[8rem]"
                         />
