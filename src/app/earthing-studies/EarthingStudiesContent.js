@@ -871,7 +871,7 @@ const VerticalCarousel = () => {
   const cardContents = [
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+        "/NavLogo/JEFLogo.svg",
       title: "What is an earthing / grounding system study ?",
       description:
         "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",

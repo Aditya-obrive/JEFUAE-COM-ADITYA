@@ -773,7 +773,7 @@ const VerticalCarousel = () => {
   const cardContents = [
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+        "/NavLogo/JEFLogo.svg",
       title: "Why choose Us?",
       description:
         "With our patented & unique custom designed & developed automation tool, we offer unparalleled customer service & have consistently ‘delighted’ our customers with the quality, completeness and timeliness of our work product.",

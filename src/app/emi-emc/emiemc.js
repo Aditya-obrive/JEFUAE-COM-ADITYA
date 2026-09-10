@@ -801,7 +801,7 @@ const VerticalCarousel = () => {
     const cardContents = [
         {
             imgSrc:
-                "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+                "/NavLogo/JEFLogo.svg",
             title: "Importance of EMI/EMC Studies",
             description:
                 "Electromagnetic interference (EMI) can disrupt the performance of electrical systems, leading to operational inefficiencies, equipment malfunctions, and potential safety hazards. EMC ensures that all electrical components within a system operate without affecting or being affected by electromagnetic disturbances. Effective EMI/EMC management is crucial for:|Ensuring Operational Continuity: Avoiding disruptions caused by electromagnetic interference.|Protecting Sensitive Equipment: Preventing damage to devices due to unregulated electromagnetic emissions.|Compliance with Standards: Adhering to international regulations such as IEC 61000 and IEEE 299.",

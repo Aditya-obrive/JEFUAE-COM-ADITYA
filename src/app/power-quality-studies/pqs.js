@@ -876,8 +876,7 @@ const VerticalCarousel = () => {
 
   const cardContents = [
     {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      imgSrc: "/NavLogo/JEFLogo.svg",
       title: "JEF’s value add",
       description:
         "JEF has a large number of class ‘A’ power analysers and highly trained engineers & technicians to carry out complete power quality measurements for various applications including Renewable Energy, Industries, Airports, Data Centre etc. With a large team of qualified engineers based in our Abu Dhabi office, we cater to the requirements of clients in the entire GCC & North Africa areas.",
