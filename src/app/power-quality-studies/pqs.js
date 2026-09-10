@@ -241,7 +241,7 @@ const PQS = () => {
 
 
     const navItems = [
-        { label: 'HOME', isActive: true, href: '/' },
+        { label: 'HOME', isActive: true },
         { label: 'SERVICES', isActive: true },
         { label: 'POWER QUALITY STUDIES', isActive: false },
     ];
@@ -328,15 +328,9 @@ const PQS = () => {
                         <div className="flex items-center h-full min-w-[240px]">
                             {navItems.map((item, index) => (
                                 <div key={index} className="flex items-center self-stretch my-auto">
-                                    {item.href ? (
-                                        <Link href={item.href} className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap cursor-pointer ${item.isActive ? 'text-[#FF0000]' : 'text-neutral-300'}`}>
-                                            {item.label}
-                                        </Link>
-                                    ) : (
-                                        <div className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-[#FF0000]' : 'text-neutral-300'}`}>
-                                            {item.label}
-                                        </div>
-                                    )}
+                                    <div className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-[#FF0000]' : 'text-neutral-300'}`}>
+                                        {item.label}
+                                    </div>
                                     {item.isActive && (
                                         <div className="flex flex-col self-stretch px-2.5 my-auto w-[27px]">
                                             <div className="flex items-center w-[7px]">
