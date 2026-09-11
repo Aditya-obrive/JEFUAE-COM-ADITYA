@@ -103,7 +103,7 @@ const MainFooter = () => {
 
     return (
         <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
-            <div className="hidden lg:flex flex-col md:flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between ">
+            <div className="flex flex-col lg:flex-row w-[88vw] max-w-[95vw] gap-8 lg:gap-0 tracking-wider justify-between">
                 <Section title="About" items={itemsAbout} />
                 <Section title="Our Business" items={itemsService} />
                 <Section title="Locations" items={itemsLocation} />
@@ -159,7 +159,7 @@ function Footer() {
 
 function Section({ title, items }) {
     return (
-        <section className="flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px]">
+        <section className="flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px] max-md:w-full max-md:min-h-0">
             <header className="w-full text-xl font-bold tracking-widest text-[#FF0000] uppercase whitespace-nowrap">
                 {title}
             </header>
