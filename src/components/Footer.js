@@ -158,12 +158,22 @@ function Footer() {
 
 
 function Section({ title, items }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <section className="flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px] max-md:w-full max-md:min-h-0">
             <header className="w-full text-xl font-bold tracking-widest text-[#FF0000] uppercase whitespace-nowrap">
-                {title}
+                <button
+                    type="button"
+                    className="flex items-center justify-between w-full text-left lg:pointer-events-none"
+                    onClick={() => setIsOpen((open) => !open)}
+                    aria-expanded={isOpen}
+                >
+                    <span>{title}</span>
+                    <span className={`lg:hidden text-2xl leading-none transition-transform ${isOpen ? 'rotate-180' : ''}`} aria-hidden="true">⌄</span>
+                </button>
             </header>
-            <ul className="flex overflow-hidden font-light flex-col mt-4 w-full text-base leading-none text-gray-300">
+            <ul className={`overflow-hidden font-light flex-col mt-4 w-full text-base leading-none text-gray-300 ${isOpen ? 'flex' : 'max-md:hidden'} lg:flex`}>
                 {items.map((item, index) => (
                     <li key={index} className="flex flex-col justify-center items-start py-2.5 w-full">
                         <div className="flex items-center">
