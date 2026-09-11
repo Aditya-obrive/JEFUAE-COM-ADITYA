@@ -210,7 +210,7 @@ export default function BlogFAQPage() {
 
                 <span
                   className={`w-2 h-2 border-r-2 border-b-2 border-[#ff0000] shrink-0 transition-transform duration-300 ${
-                    isOpen ? "rotate-[-135deg]" : "rotate-45"
+                    openIndex === index ? "rotate-[-135deg]" : "rotate-45"
                   }`}
                 ></span>
               </button>

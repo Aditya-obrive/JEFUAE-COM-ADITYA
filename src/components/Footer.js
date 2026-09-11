@@ -39,6 +39,10 @@ const MainFooter = () => {
    * =========================================================
    */
   const blogFaqLinks = {
+    // Main Blog Page
+    "/blog": 
+    "/blog/faq",
+    
     // 1. Power System Studies for Renewable Energy
     "/blog/power-system-studies-renewable-energy-integration-uae-middle-east":
       "/blog/power-system-studies-renewable-energy-integration-uae-middle-east/faq",
@@ -814,4 +818,4 @@ const FAQComponent = ({ currentFaqPath }) => {
   );
 };
 
-export default MainFooter;  
+export default MainFooter;
