@@ -12,35 +12,121 @@ const MainFooter = () => {
   const pathname = usePathname();
 
   /*
-   * FAQ links for each Our Business service
+   * =========================================================
+   * FAQ LINKS FOR OUR BUSINESS SERVICES
+   * =========================================================
    */
   const faqLinks = {
     "/earthing-studies": "/earthing-studies/faq",
+
     "/lightning-protection-studies": "/lightning-protection-studies/faq",
+
     "/power-system-studies": "/power-system-studies/faq",
+
     "/power-quality-studies": "/power-quality-studies/faq",
+
     "/instrumentation-earthing-studies":
       "/instrumentation-earthing-studies/faq",
+
     "/emi-emc": "/emi-emc/faq",
+
     "/root-cause-analysis": "/root-cause-analysis/faq",
   };
 
   /*
-   * If the user is on a FAQ page, remove /faq
-   * so we can still find the correct service.
+   * =========================================================
+   * FAQ LINKS FOR ALL 9 BLOG PAGES
+   * =========================================================
+   */
+  const blogFaqLinks = {
+    // 1. Power System Studies for Renewable Energy
+    "/blog/power-system-studies-renewable-energy-integration-uae-middle-east":
+      "/blog/power-system-studies-renewable-energy-integration-uae-middle-east/faq",
+
+    // 2. Role of Power System Studies in Energy Transition
+    "/blog/role-of-power-system-studies-in-energy-transition":
+      "/blog/role-of-power-system-studies-in-energy-transition/faq",
+
+    // 3. Need for Comprehensive Earthing Audits
+    "/blog/need-for-comprehensive-earthing-audits":
+      "/blog/need-for-comprehensive-earthing-audits/faq",
+
+    // 4. Need for Lightning Protection Systems
+    "/blog/need-for-lightning-protection-systems":
+      "/blog/need-for-lightning-protection-systems/faq",
+
+    // 5. Advancements in Hybrid Power Systems
+    "/blog/advancements-in-hybrid-power-systems":
+      "/blog/advancements-in-hybrid-power-systems/faq",
+
+    // 6. Electromagnetic Transient Studies
+    "/blog/electromagnetic-transient-studies-renewable-grid-integration":
+      "/blog/electromagnetic-transient-studies-renewable-grid-integration/faq",
+
+    // 7. Advanced Electromagnetic Transient Studies
+    "/blog/advanced-electromagnetic-transient-studies-renewable-grid-uae":
+      "/blog/advanced-electromagnetic-transient-studies-renewable-grid-uae/faq",
+
+    // 8. Need for Sub-Synchronous Oscillation Studies
+    "/blog/need-for-sub-synchronous-oscillation-studies":
+      "/blog/need-for-sub-synchronous-oscillation-studies/faq",
+
+    // 9. AC Interference Studies for Oil & Gas Utilities
+    "/blog/ac-interference-studies-for-oil-gas-utilities":
+      "/blog/ac-interference-studies-for-oil-gas-utilities/faq",
+  };
+
+  /*
+   * =========================================================
+   * REMOVE /faq FROM CURRENT URL
+   * =========================================================
+   *
+   * Example:
+   *
+   * /blog/example
+   *
+   * becomes:
+   *
+   * /blog/example
+   *
+   * And:
+   *
+   * /blog/example/faq
+   *
+   * becomes:
+   *
+   * /blog/example
+   *
+   * This allows the footer to work on BOTH
+   * the blog page and its FAQ page.
    */
   const servicePath = pathname?.endsWith("/faq")
     ? pathname.replace(/\/faq$/, "")
     : pathname;
 
-  const currentFaqPath = faqLinks[servicePath];
+  /*
+   * =========================================================
+   * FIND FAQ FOR CURRENT PAGE
+   * =========================================================
+   *
+   * First check service FAQ.
+   * If it is not a service page,
+   * check blog FAQ.
+   */
+  const currentFaqPath = faqLinks[servicePath] || blogFaqLinks[servicePath];
 
+  /*
+   * =========================================================
+   * FOOTER ANIMATION
+   * =========================================================
+   */
   useEffect(() => {
-    // Select all elements with the X-axis-anm-footer class
-    // and apply staggered animation
     gsap.fromTo(
-      gsap.utils.toArray(".X-axis-card-anm-footer"),
-      { opacity: 0, x: 100 },
+      gsap.utils.toArray(".X-axis-anm-footer"),
+      {
+        opacity: 0,
+        x: 100,
+      },
       {
         x: 0,
         opacity: 1,
@@ -57,22 +143,47 @@ const MainFooter = () => {
   }, []);
 
   /*
-   * ABOUT links
+   * =========================================================
+   * ABOUT
+   * =========================================================
    */
   const itemsAbout = [
-    { name: "What is JEF", path: "/about-us" },
-    { name: "JEF Leadership Team", path: "/leadership-team" },
-    { name: "JEF Smart Digitization", path: "/SmartDigitalization" },
-    { name: "JEF L&D Centre", path: "/L&D-Centre" },
+    {
+      name: "What is JEF",
+      path: "/about-us",
+    },
+    {
+      name: "JEF Leadership Team",
+      path: "/leadership-team",
+    },
+    {
+      name: "JEF Smart Digitization",
+      path: "/SmartDigitalization",
+    },
+    {
+      name: "JEF L&D Centre",
+      path: "/L&D-Centre",
+    },
   ];
 
   /*
-   * OUR BUSINESS links
+   * =========================================================
+   * OUR BUSINESS
+   * =========================================================
    */
   const itemsService = [
-    { name: "Power System Studies", path: "/power-system-studies" },
-    { name: "Power Quality Studies", path: "/power-quality-studies" },
-    { name: "Earthing Studies", path: "/earthing-studies" },
+    {
+      name: "Power System Studies",
+      path: "/power-system-studies",
+    },
+    {
+      name: "Power Quality Studies",
+      path: "/power-quality-studies",
+    },
+    {
+      name: "Earthing Studies",
+      path: "/earthing-studies",
+    },
     {
       name: "LPS System Studies",
       path: "/lightning-protection-studies",
@@ -81,26 +192,55 @@ const MainFooter = () => {
       name: "Instrumentation Studies",
       path: "/instrumentation-earthing-studies",
     },
-    { name: "Root Cause Analysis", path: "/root-cause-analysis" },
-    { name: "EMI EMC", path: "/emi-emc" },
+    {
+      name: "Root Cause Analysis",
+      path: "/root-cause-analysis",
+    },
+    {
+      name: "EMI EMC",
+      path: "/emi-emc",
+    },
   ];
 
   /*
+   * =========================================================
    * LOCATIONS
+   * =========================================================
    */
-  const itemsLocation = [{ name: "India" }, { name: "USA" }, { name: "UAE" }];
+  const itemsLocation = [
+    {
+      name: "India",
+    },
+    {
+      name: "USA",
+    },
+    {
+      name: "UAE",
+    },
+  ];
 
   /*
+   * =========================================================
    * INDUSTRIES
+   * =========================================================
    */
   const itemsBusiness = [
-    { name: "Oil and Gas", path: "/industries/oilandgas" },
-    { name: "Power Utilities", path: "/industries/powerutilities" },
+    {
+      name: "Oil and Gas",
+      path: "/industries/oilandgas",
+    },
+    {
+      name: "Power Utilities",
+      path: "/industries/powerutilities",
+    },
     {
       name: "Manufacturing Plant",
       path: "/industries/manufacturingplant",
     },
-    { name: "Process Plant", path: "/industries/processplant" },
+    {
+      name: "Process Plant",
+      path: "/industries/processplant",
+    },
     {
       name: "Commercial Buildings",
       path: "/industries/commercialbuilding",
@@ -112,15 +252,30 @@ const MainFooter = () => {
   ];
 
   /*
+   * =========================================================
    * CAREERS
+   * =========================================================
    */
-  const itemsCareers = [{ name: "Jobs", path: "/careers" }];
+  const itemsCareers = [
+    {
+      name: "Jobs",
+      path: "/careers",
+    },
+  ];
 
   /*
+   * =========================================================
    * INTERNAL LINKS
+   * =========================================================
    *
-   * Only show the service-specific FAQ when
-   * the current page belongs to one of the services.
+   * Only show FAQ when the current page has an FAQ.
+   *
+   * This works for:
+   *
+   * Service page
+   * Blog page
+   * Service FAQ page
+   * Blog FAQ page
    */
   const itemsInternalLinks = currentFaqPath
     ? [
@@ -133,18 +288,24 @@ const MainFooter = () => {
 
   return (
     <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
-      {/* =========================
-                DESKTOP FOOTER MENU
-            ========================== */}
+      {/* =====================================================
+          DESKTOP FOOTER MENU
+      ====================================================== */}
+
       <div className="hidden lg:flex flex-col md:flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between">
+        {/* ABOUT */}
         <Section title="About" items={itemsAbout} />
 
+        {/* OUR BUSINESS */}
         <Section title="Our Business" items={itemsService} />
 
+        {/* LOCATIONS */}
         <Section title="Locations" items={itemsLocation} />
 
+        {/* INDUSTRIES */}
         <Section title="Industries" items={itemsBusiness} />
 
+        {/* CAREERS */}
         <Section title="Careers" items={itemsCareers} />
 
         {/* INTERNAL LINKS */}
@@ -153,16 +314,18 @@ const MainFooter = () => {
         )}
       </div>
 
-      {/* =========================
-                MOBILE FOOTER MENU
-            ========================== */}
+      {/* =====================================================
+          MOBILE FOOTER MENU
+      ====================================================== */}
+
       <div className="lg:hidden w-full">
         <FAQComponent currentFaqPath={currentFaqPath} />
       </div>
 
-      {/* =========================
-                SOCIAL + COPYRIGHT FOOTER
-            ========================== */}
+      {/* =====================================================
+          SOCIAL + COPYRIGHT FOOTER
+      ====================================================== */}
+
       <Footer />
     </main>
   );
@@ -178,7 +341,10 @@ function Footer() {
       {/* Horizontal Line */}
       <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
 
-      {/* Social Media */}
+      {/* =====================================================
+          SOCIAL MEDIA
+      ====================================================== */}
+
       <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
         <div className="hidden card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
           FOLLOW JEF ON SOCIAL MEDIA
@@ -227,9 +393,10 @@ function Footer() {
         </div>
       </div>
 
-      {/* =========================
-                COPYRIGHT SECTION
-            ========================== */}
+      {/* =====================================================
+          COPYRIGHT
+      ====================================================== */}
+
       <div className="flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900 max-md:max-w-full">
         <div className="flex X-axis-card-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
           {/* Policies */}
@@ -264,7 +431,7 @@ function Footer() {
 }
 
 /* =========================================================
-   DESKTOP FOOTER SECTION COMPONENT
+   DESKTOP FOOTER SECTION
 ========================================================= */
 
 function Section({ title, items }) {
@@ -306,8 +473,14 @@ function Section({ title, items }) {
 
 const FAQComponent = ({ currentFaqPath }) => {
   const [faqData, setFaqData] = useState([
+    /*
+     * =====================================================
+     * ABOUT
+     * =====================================================
+     */
     {
       question: "ABOUT",
+
       content: [
         {
           label: "What is JEF",
@@ -326,11 +499,18 @@ const FAQComponent = ({ currentFaqPath }) => {
           path: "/L&D-Centre",
         },
       ],
+
       isOpen: false,
     },
 
+    /*
+     * =====================================================
+     * OUR BUSINESS
+     * =====================================================
+     */
     {
       question: "Our Business",
+
       content: [
         {
           label: "Power System Studies",
@@ -361,11 +541,18 @@ const FAQComponent = ({ currentFaqPath }) => {
           path: "/emi-emc",
         },
       ],
+
       isOpen: false,
     },
 
+    /*
+     * =====================================================
+     * LOCATIONS
+     * =====================================================
+     */
     {
       question: "Locations",
+
       content: [
         {
           label: "India",
@@ -380,11 +567,18 @@ const FAQComponent = ({ currentFaqPath }) => {
           path: "",
         },
       ],
+
       isOpen: false,
     },
 
+    /*
+     * =====================================================
+     * INDUSTRIES
+     * =====================================================
+     */
     {
       question: "Industries",
+
       content: [
         {
           label: "Oil and Gas",
@@ -411,40 +605,57 @@ const FAQComponent = ({ currentFaqPath }) => {
           path: "/industries/renewableenergy",
         },
       ],
+
       isOpen: false,
     },
 
+    /*
+     * =====================================================
+     * CAREERS
+     * =====================================================
+     */
     {
       question: "Careers",
+
       content: [
         {
           label: "Jobs",
           path: "/careers",
         },
       ],
+
       isOpen: false,
     },
 
     /*
+     * =====================================================
      * INTERNAL LINKS
+     *
+     * Only appears when current page has an FAQ.
+     * =====================================================
      */
     ...(currentFaqPath
       ? [
           {
             question: "Internal Links",
+
             content: [
               {
                 label: "FAQ",
                 path: currentFaqPath,
               },
             ],
+
             isOpen: false,
           },
         ]
       : []),
   ]);
 
-  /* Toggle mobile footer sections */
+  /* =====================================================
+     TOGGLE MOBILE FOOTER SECTIONS
+  ===================================================== */
+
   const toggleFAQ = (index) => {
     setFaqData(
       faqData.map((item, i) => ({
@@ -455,11 +666,12 @@ const FAQComponent = ({ currentFaqPath }) => {
   };
 
   /* =====================================================
-       MOBILE FAQ ITEM
-    ===================================================== */
+     MOBILE FAQ ITEM
+  ===================================================== */
 
   const FAQItem = ({ question, content, isOpen, onToggle }) => {
     const contentRef = useRef(null);
+
     const [height, setHeight] = useState(0);
 
     /* Calculate content height */
@@ -479,16 +691,24 @@ const FAQComponent = ({ currentFaqPath }) => {
     useEffect(() => {
       gsap.fromTo(
         gsap.utils.toArray(".X-axis-card-anm-footer"),
-        { opacity: 0, x: 100 },
+
+        {
+          opacity: 0,
+          x: 100,
+        },
+
         {
           x: 0,
           opacity: 1,
           duration: 1,
           stagger: 0.2,
+
           scrollTrigger: {
             trigger: ".card-slider-footer",
+
             start: "top 80%",
             end: "top 100%",
+
             toggleActions: "play none none none",
           },
         },
@@ -498,6 +718,7 @@ const FAQComponent = ({ currentFaqPath }) => {
     return (
       <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
         {/* Question */}
+
         <div
           onClick={onToggle}
           className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full cursor-pointer"
@@ -528,6 +749,7 @@ const FAQComponent = ({ currentFaqPath }) => {
         </div>
 
         {/* Content */}
+
         <div
           ref={contentRef}
           className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
@@ -562,8 +784,8 @@ const FAQComponent = ({ currentFaqPath }) => {
   };
 
   /* =====================================================
-       MOBILE FOOTER RETURN
-    ===================================================== */
+     MOBILE FOOTER RETURN
+  ===================================================== */
 
   return (
     <section className="flex overflow-hidden relative flex-col">
@@ -592,4 +814,4 @@ const FAQComponent = ({ currentFaqPath }) => {
   );
 };
 
-export default MainFooter;
+export default MainFooter;  
