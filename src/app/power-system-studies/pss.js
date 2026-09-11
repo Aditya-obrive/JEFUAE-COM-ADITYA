@@ -1,14 +1,12 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import gsap from 'gsap';
-import Link from 'next/link'
+import gsap from "gsap";
+import Link from "next/link";
 
 const PSS = () => {
-
-
   useEffect(() => {
-    gsap.utils.toArray('.Y-axis-text-Title-Service3').forEach((element) => {
+    gsap.utils.toArray(".Y-axis-text-Title-Service3").forEach((element) => {
       gsap.fromTo(
         element,
         { opacity: 0, y: 50 },
@@ -19,20 +17,19 @@ const PSS = () => {
           scrollTrigger: {
             trigger: element,
             stagger: 0.6,
-            start: 'top 100%',
-            toggleActions: 'play none none none',
+            start: "top 100%",
+            toggleActions: "play none none none",
           },
-        }
+        },
       );
     });
   }, []);
 
   // Testimonials
 
-
   useEffect(() => {
     gsap.fromTo(
-      gsap.utils.toArray('.Y-axis-Testimonials'),
+      gsap.utils.toArray(".Y-axis-Testimonials"),
       { opacity: 0, y: 100 },
       {
         y: 0,
@@ -40,21 +37,20 @@ const PSS = () => {
         duration: 1.1,
         stagger: 0.3,
         scrollTrigger: {
-          trigger: '.Testimonials',
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none none',
+          trigger: ".Testimonials",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none",
         },
-      }
+      },
     );
   }, []);
-
 
   // For Key Components
 
   useEffect(() => {
     gsap.fromTo(
-      gsap.utils.toArray('.Y-axis-card-anm'),
+      gsap.utils.toArray(".Y-axis-card-anm"),
       { opacity: 0, y: 100 },
       {
         y: 0,
@@ -62,20 +58,20 @@ const PSS = () => {
         duration: 1.1,
         stagger: 0.3,
         scrollTrigger: {
-          trigger: '.card-slider',
-          start: 'top 80%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none none',
+          trigger: ".card-slider",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none none",
         },
-      }
+      },
     );
   }, []);
 
-  // Our Services Animation 
+  // Our Services Animation
 
   useEffect(() => {
     gsap.fromTo(
-      gsap.utils.toArray('.Y-axis-Service-anm'),
+      gsap.utils.toArray(".Y-axis-Service-anm"),
       { opacity: 0, y: 100 },
       {
         y: 0,
@@ -83,21 +79,17 @@ const PSS = () => {
         duration: 1.1,
         stagger: 0.3,
         scrollTrigger: {
-          trigger: '.circle-slider',
-          start: 'top 60%',
-          end: 'bottom 20%',
-          toggleActions: 'play none none none',
+          trigger: ".circle-slider",
+          start: "top 60%",
+          end: "bottom 20%",
+          toggleActions: "play none none none",
         },
-      }
+      },
     );
   }, []);
 
-
-
-
   useEffect(() => {
-
-    gsap.utils.toArray('.ContactUsAnimation').forEach((element) => {
+    gsap.utils.toArray(".ContactUsAnimation").forEach((element) => {
       gsap.fromTo(
         element,
         { opacity: 0, y: 50 },
@@ -108,60 +100,114 @@ const PSS = () => {
           stagger: 0.2,
           scrollTrigger: {
             trigger: element,
-            start: 'top 70%',
-            toggleActions: 'play none none none',
+            start: "top 70%",
+            toggleActions: "play none none none",
           },
-        }
+        },
       );
     });
   }, []);
 
-  const services = useMemo(() => [
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '/HomePageImg/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
-    { image: '/HomePageImg/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
-    { image: '/HomePageImg/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
-    { image: '/HomePageImg/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '/HomePageImg/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
-    { image: '/HomePageImg/Emi Emc 2.jpg', text: 'EMI EMC', path: '/emi-emc' },
-    { image: '/HomePageImg/Root Cause Analysis 2.jpg', text: 'Root cause analysis', path: '/root-cause-analysis' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-  ], []);
+  const services = useMemo(
+    () => [
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      {
+        image: "/HomePageImg/Earthing Studies 2.png",
+        text: "Earthing studies",
+        path: "/earthing-studies",
+      },
+      {
+        image: "/HomePageImg/Lightning Protection 2.png",
+        text: "Lightning protection system studies",
+        path: "/lightning-protection-studies",
+      },
+      {
+        image: "/HomePageImg/Power System Studies 2.png",
+        text: "Power system studies",
+        path: "/power-system-studies",
+      },
+      {
+        image: "/HomePageImg/Power Quality and Root cause Analysis 2.png",
+        text: "Power quality",
+        path: "/power-quality-studies",
+      },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      {
+        image: "/HomePageImg/Instrumentation Earthing 2.png",
+        text: "Instrumentation earthing",
+        path: "/instrumentation-earthing-studies",
+      },
+      {
+        image: "/HomePageImg/Emi Emc 2.jpg",
+        text: "EMI EMC",
+        path: "/emi-emc",
+      },
+      {
+        image: "/HomePageImg/Root Cause Analysis 2.jpg",
+        text: "Root cause analysis",
+        path: "/root-cause-analysis",
+      },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+    ],
+    [],
+  );
 
-  const services2 = useMemo(() => [
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '/HomePageImg/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
-    { image: '/HomePageImg/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
-    { image: '/HomePageImg/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '/HomePageImg/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
-    { image: '/HomePageImg/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-    { image: '', text: '', path: '' },
-  ], []);
+  const services2 = useMemo(
+    () => [
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      {
+        image: "/HomePageImg/Earthing Studies 2.png",
+        text: "Earthing studies",
+        path: "/earthing-studies",
+      },
+      {
+        image: "/HomePageImg/Lightning Protection 2.png",
+        text: "Lightning protection system studies",
+        path: "/lightning-protection-studies",
+      },
+      {
+        image: "/HomePageImg/Power System Studies 2.png",
+        text: "Power system studies",
+        path: "/power-system-studies",
+      },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      {
+        image: "/HomePageImg/Power Quality and Root cause Analysis 2.png",
+        text: "Power quality",
+        path: "/power-quality-studies",
+      },
+      {
+        image: "/HomePageImg/Instrumentation Earthing 2.png",
+        text: "Instrumentation earthing",
+        path: "/instrumentation-earthing-studies",
+      },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+      { image: "", text: "", path: "" },
+    ],
+    [],
+  );
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [backgroundImage, setBackgroundImage] = useState('');
+  const [backgroundImage, setBackgroundImage] = useState("");
   const serviceRefs = useRef([]);
   const service2Refs = useRef([]);
   const imgRef = useRef(null);
@@ -169,13 +215,14 @@ const PSS = () => {
   useEffect(() => {
     const img = imgRef.current;
     if (img) {
-      gsap.fromTo(img,
+      gsap.fromTo(
+        img,
         { opacity: 0 },
         {
           opacity: 1,
           duration: 2.5,
-          ease: 'power2.inOut'
-        }
+          ease: "power2.inOut",
+        },
       );
     }
   }, [imgRef]);
@@ -187,7 +234,7 @@ const PSS = () => {
 
   const handleMouseLeave = () => {
     setHoveredIndex(null);
-    setBackgroundImage('');
+    setBackgroundImage("");
   };
 
   useEffect(() => {
@@ -197,16 +244,24 @@ const PSS = () => {
   useEffect(() => {
     serviceRefs.current.forEach((ref, index) => {
       if (ref) {
-        if (index === hoveredIndex && services[index]?.text !== '') {
-          gsap.to(ref, { scale: 1.3, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        if (index === hoveredIndex && services[index]?.text !== "") {
+          gsap.to(ref, {
+            scale: 1.3,
+            opacity: 1,
+            duration: 0.2,
+            ease: "power2.inOut",
+          });
         } else {
           gsap.to(ref, {
             scale: hoveredIndex !== null ? 0.9 : 1,
             opacity: hoveredIndex !== null ? 0.5 : 1,
             // border: hoveredIndex !== null && services[index]?.text === '' ? '1px solid white' : '',
-            backgroundColor: hoveredIndex !== null && services[index]?.text === '' ? 'transparent' : '',
+            backgroundColor:
+              hoveredIndex !== null && services[index]?.text === ""
+                ? "transparent"
+                : "",
             duration: 0.2,
-            ease: 'power2.inOut'
+            ease: "power2.inOut",
           });
         }
       }
@@ -220,27 +275,34 @@ const PSS = () => {
   useEffect(() => {
     service2Refs.current.forEach((ref, index) => {
       if (ref) {
-        if (index === hoveredIndex && services2[index]?.text !== '') {
-          gsap.to(ref, { scale: 1.3, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        if (index === hoveredIndex && services2[index]?.text !== "") {
+          gsap.to(ref, {
+            scale: 1.3,
+            opacity: 1,
+            duration: 0.2,
+            ease: "power2.inOut",
+          });
         } else {
           gsap.to(ref, {
             scale: hoveredIndex !== null ? 0.9 : 1,
             opacity: hoveredIndex !== null ? 0.5 : 1,
             // border: hoveredIndex !== null && services2[index]?.text === '' ? '1px solid white' : '',
-            backgroundColor: hoveredIndex !== null && services2[index]?.text === '' ? 'transparent' : '',
+            backgroundColor:
+              hoveredIndex !== null && services2[index]?.text === ""
+                ? "transparent"
+                : "",
             duration: 0.2,
-            ease: 'power2.inOut'
+            ease: "power2.inOut",
           });
         }
       }
     });
   }, [hoveredIndex, services2]);
 
-
   const navItems = [
-    { label: 'HOME', isActive: true, href: '/' },
-    { label: 'SERVICES', isActive: true },
-    { label: 'POWER SYSTEM STUDIES', isActive: false },
+    { label: "HOME", isActive: true, href: "/" },
+    { label: "SERVICES", isActive: true, href: "/power-system-studies" },
+    { label: "POWER SYSTEM STUDIES", isActive: false },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -250,56 +312,93 @@ const PSS = () => {
   };
 
   const benefitItems = [
-    "ABOUT Earthing studies",
-    'What is an Earthing/Grounding System Studies',
-    'Earthing/Grounding System Studies',
-    'Our Certifications and Expertise',
-    'Detailed Study Reports and Analysis',
-    'Benefits of Professional Earthing/Grounding System Studies',
+    "ABOUT Power System Studies",
+    "List of Studies for Renewable Energy",
+    "Industries & Applications",
+    "Advanced System Studies",
+    "Planning and Operations Studies",
+    "Power System Protection Studies",
+    "Electromagnetic Transient Studies",
+    "Power Quality Compliance Studies & Measurements",
   ];
 
   const components = [
-
     {
-      imageSrc: './SerivePage/01.png',
-      title: 'Risk Assessment',
-      description: 'Using Risk Assessment Software to compare calculated risk against tolerable risk levels as per IEC 62305-2.',
+      imageSrc: "./SerivePage/01.png",
+      title: "Load Flow Studies",
+      description:
+        "Steady-state power system analysis for evaluating system performance, operating conditions and network behaviour.",
     },
     {
-      imageSrc: './SerivePage/02.png',
-      title: 'Surge Protection Devices (SPD):',
-      description: 'Selecting Class I, II, and III SPDs at various levels of the electrical distribution system to protect against conducted surges.',
+      imageSrc: "./SerivePage/02.png",
+      title: "Short Circuit Studies",
+      description:
+        "Power system fault analysis used to assess short-circuit levels and support equipment and protection decisions.",
     },
     {
-      imageSrc: './SerivePage/03.png',
-      title: 'Additional Mitigation Techniques',
-      description: 'Using equi-potential bonding, warning notices, and other best engineering practices to further reduce risk.',
+      imageSrc: "./SerivePage/03.png",
+      title: "Protection & Relay Coordination Studies",
+      description:
+        "Assessment of protection coordination to support reliable fault clearing and coordinated system operation.",
     },
-  ]
-
-  const buttons = [
-    { text: 'CONTACT US', className: 'bg-[#FF0000]' }
+    {
+      imageSrc: "./SerivePage/01.png",
+      title: "AC/DC Arc Flash Studies",
+      description:
+        "Arc flash risk assessment for identifying electrical hazards and supporting safer operating practices.",
+    },
+    {
+      imageSrc: "./SerivePage/02.png",
+      title: "Harmonic Analysis",
+      description:
+        "Analysis of harmonic behaviour and power-quality impacts within electrical networks.",
+    },
+    {
+      imageSrc: "./SerivePage/03.png",
+      title: "Motor Starting Study",
+      description:
+        "Assessment of motor-starting effects on the electrical system and connected equipment.",
+    },
   ];
 
+  const buttons = [{ text: "CONTACT US", className: "bg-[#FF0000]" }];
 
   return (
     <>
-
       {/* Landing Img Section */}
 
       <section className="flex overflow-hidden h-screen flex-col bg-white">
         <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
-          <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
-            <source src="./SerivePage/Power System Studies Banner Video.mp4" type="video/mp4" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute size-full object-cover"
+          >
+            <source
+              src="./SerivePage/Power System Studies Banner Video.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
+
           <div className="Y-axis-text-Title-Service3 flex inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
-            <h1 className=" uppercase lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-              Power System Studies
+            <h1 className="uppercase lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+              Power System Studies In UAE
             </h1>
-            <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
-              <Link href={'/get-in-touch'}>
-                <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-[#FF0000] hover:text-white uppercase 2xl:min-h-[64px] rounded-[50px]">
+
+            <p className="mt-6 max-w-4xl text-base lg:text-lg font-light leading-7 text-white max-md:text-base">
+              Power system studies are engineering assessments used to evaluate
+              electrical network performance, safety, reliability and
+              compliance. JEF UAE applies project-specific data, engineering
+              analysis and recognized standards to support industrial, utility
+              and renewable energy projects.
+            </p>
+
+            <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900 max-md:mt-10">
+              <Link href={"/get-in-touch"}>
+                <button className="px-5 lg:px-10 self-stretch py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-[#FF0000] hover:text-white uppercase 2xl:min-h-[64px] rounded-[50px]">
                   Get in touch
                 </button>
               </Link>
@@ -308,33 +407,48 @@ const PSS = () => {
         </div>
       </section>
 
-
-
       {/* Contact Us section */}
-
-
 
       <section className="flex h-auto -mb-11 md:mb-0 overflow-hidden flex-col bg-stone-900">
         <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full" />
+
         <nav className="flex flex-col justify-center py-6 px-24 w-full bg-zinc-800 min-h-[64px] max-md:px-5 max-md:max-w-full">
           <div className="flex w-full max-md:max-w-full">
             <div className="flex items-center h-full min-w-[240px]">
               {navItems.map((item, index) => (
-                <div key={index} className="flex items-center self-stretch my-auto">
+                <div
+                  key={index}
+                  className="flex items-center self-stretch my-auto"
+                >
                   {item.href ? (
-                    <Link href={item.href} className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap cursor-pointer ${item.isActive ? 'text-[#FF0000]' : 'text-neutral-300'}`}>
+                    <Link
+                      href={item.href}
+                      className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap cursor-pointer ${
+                        item.isActive ? "text-[#FF0000]" : "text-neutral-300"
+                      }`}
+                    >
                       {item.label}
                     </Link>
                   ) : (
-                    <div className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-[#FF0000]' : 'text-neutral-300'}`}>
+                    <div
+                      className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${
+                        item.isActive ? "text-[#FF0000]" : "text-neutral-300"
+                      }`}
+                    >
                       {item.label}
                     </div>
                   )}
+
                   {item.isActive && (
                     <div className="flex flex-col self-stretch px-2.5 my-auto w-[27px]">
                       <div className="flex items-center w-[7px]">
                         <div className="flex flex-col justify-center self-stretch my-auto min-h-[7px] w-[7px]">
-                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/98403646f26f29fd8d19e6e57b2e9f8b5de2f748795475a0d9039378b1786404?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-full aspect-square" />
+                          <img
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/98403646f26f29fd8d19e6e57b2e9f8b5de2f748795475a0d9039378b1786404?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                            alt=""
+                            className="object-contain flex-1 w-full aspect-square"
+                          />
                         </div>
                       </div>
                     </div>
@@ -344,77 +458,125 @@ const PSS = () => {
             </div>
           </div>
         </nav>
+
         <div className="ContactUsAnimation flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-          <img loading="lazy" src="./SerivePage/PSLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
+          <img
+            loading="lazy"
+            src="./SerivePage/PSLogo.png"
+            alt="JEF Power System Studies Logo"
+            className="object-contain w-16 aspect-square"
+          />
         </div>
+
         <header className="ContactUsAnimation flex p-4 flex-col items-center self-center mt-10 w-full text-sm text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-          <h1 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
+          <h2 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
             <div className="ContactUsAnimation w-full max-md:max-w-full">
-              Power System Studies
+              What Is Power System Studies?
             </div>
-          </h1>
-          <p className="self-stretch w-[80%] lg:w-[60%] text-center mx-auto  mt-12 font-light max-md:mt-10 max-md:max-w-full">
-            We offer a very wide and comprehensive range of Power System Studies for Renewable Energy applications <br /> including Solar PV, WIND, BESS, Hybrid & Green hydrogen plants & Micro grids.
-            With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p>
-          <p>We have multiple licences and expertise in using all major softwares like:
+          </h2>
+
+          <p className="self-stretch w-[80%] lg:w-[60%] text-center mx-auto mt-12 font-light max-md:mt-10 max-md:max-w-full">
+            Power System Studies refers to the engineering assessment, analysis
+            or service used to improve electrical safety, reliability and
+            compliance. JEF UAE applies project-specific data, recognized
+            engineering methods and documented recommendations.
           </p>
-          {/* <p className="my-5">With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p> */}
-          {/* <p>We have multiple licences & using all major Softwares like</p> */}
+
+          <p className="self-stretch w-[80%] lg:w-[60%] text-center mx-auto mt-6 font-light max-md:max-w-full">
+            We offer a very wide and comprehensive range of Power System Studies
+            for Renewable Energy applications including Solar PV, WIND, BESS,
+            Hybrid & Green hydrogen plants & Micro grids.
+          </p>
+
+          <p className="self-stretch w-[80%] lg:w-[60%] text-center mx-auto mt-6 font-light max-md:max-w-full">
+            With experience in Grid codes of several countries, we bring
+            comprehensive knowledge & Expertise.
+          </p>
+
+          <p className="mt-6">
+            We have multiple licences and expertise in using all major softwares
+            like:
+          </p>
+
           <div className="my-5">
             <p>PSSE, PSCAD, DIG SILENT, ETAP, EMTP RV, CDEGS.</p>
           </div>
-          <p className="w-[80%] lg:w-[60%] text-center mx-auto">We have the ability to study any possible steady state, dynamic, EMT & Hormonic issues, in a new or existing plant.</p>
-          <p className="w-[80%] lg:w-[60%] text-center mx-auto">Over the last 30 years, JEF has been synonymous with going the proverbial “EXTRA MILE” to ensure meeting the objectives of the project including technical aspects & timely completion.</p>
+
+          <p className="w-[80%] lg:w-[60%] text-center mx-auto">
+            We have the ability to study any possible steady state, dynamic, EMT
+            & Harmonic issues, in a new or existing plant.
+          </p>
+
+          <p className="w-[80%] lg:w-[60%] text-center mx-auto mt-6">
+            Over the last 30 years, JEF has been synonymous with going the
+            proverbial “EXTRA MILE” to ensure meeting the objectives of the
+            project including technical aspects & timely completion.
+          </p>
         </header>
+
         <div className="flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-[#FF0000] w-[770px] max-md:mt-10">
           <p className="ContactUsAnimation px-56 w-full max-md:px-5 max-md:max-w-full">
             Get in touch for any queries and real-life case-studies
           </p>
+
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
-        <Link href='/get-in-touch' className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
-          <span className="self-stretch my-auto">CONTACT US</span>
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
-        </Link>
+
+        <div className="flex flex-col items-center">
+          <Link
+            href="/get-in-touch"
+            className="ContactUsAnimation flex gap-3.5 justify-center items-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]"
+          >
+            <span className="self-stretch my-auto">CONTACT US</span>
+
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+              alt=""
+              className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
+            />
+          </Link>
+
+          <Link
+            href="/power-system-studies/faq"
+            className="ContactUsAnimation flex mt-4 mb-10 justify-center items-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]"
+          >
+            <span className="self-stretch my-auto">
+              POWER SYSTEM STUDIES FAQ
+            </span>
+          </Link>
+        </div>
       </section>
-
-
-
-
 
       <section>
-        < VerticalCarousel />
+        <VerticalCarousel />
       </section>
-
-
-
-
 
       <section>
-        < CarouselSection components={components} />
+        <CarouselSection components={components} />
       </section>
-
 
       <section className="hidden sm:block">
-        <div className={` h-full bg-slate-900`}>
-          <div
-            className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
+        <div className={`h-full bg-slate-900`}>
+          <div className="w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
             {backgroundImage && (
-              <div className="absolute inset-0 w-full h-full ">
+              <div className="absolute inset-0 w-full h-full">
                 <img
                   ref={imgRef}
                   src={backgroundImage}
-                  alt=""
+                  alt="Power system studies project background"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             )}
+
             <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
               <h2 className="self-center text-3xl font-semibold leading-none text-[#FF0000] tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
+
               <div className="circle-slider flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
-                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                <div className="flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild">
                   {services.slice(0, 8).map((service, index) => (
                     <ServiceItem
                       key={index}
@@ -422,12 +584,15 @@ const PSS = () => {
                       path={service.path}
                       image={service.image}
                       ref={(el) => (serviceRefs.current[index] = el)}
-                      onMouseEnter={() => handleMouseEnter(index, service.image)}
+                      onMouseEnter={() =>
+                        handleMouseEnter(index, service.image)
+                      }
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
                 </div>
-                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-10'>
+
+                <div className="flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-10">
                   {services.slice(8).map((service, index) => (
                     <ServiceItem
                       key={index + 8}
@@ -435,7 +600,9 @@ const PSS = () => {
                       path={service.path}
                       image={service.image}
                       ref={(el) => (serviceRefs.current[index + 8] = el)}
-                      onMouseEnter={() => handleMouseEnter(index + 8, service.image)}
+                      onMouseEnter={() =>
+                        handleMouseEnter(index + 8, service.image)
+                      }
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
@@ -447,25 +614,26 @@ const PSS = () => {
       </section>
 
       <section className="block sm:hidden">
-        <div className={` h-full bg-slate-900`}>
-          <div
-            className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
+        <div className={`h-full bg-slate-900`}>
+          <div className="w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
             {backgroundImage && (
-              <div className="absolute inset-0 w-full h-full ">
+              <div className="absolute inset-0 w-full h-full">
                 <img
                   ref={imgRef}
                   src={backgroundImage}
-                  alt=""
+                  alt="Power system studies project background"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             )}
+
             <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
               <h2 className="self-center text-3xl font-semibold leading-none text-[#FF0000] tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
+
               <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
-                <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                <div className="flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild">
                   {services2.slice(0, 7).map((service2, index) => (
                     <ServiceItem2
                       key={index}
@@ -473,12 +641,15 @@ const PSS = () => {
                       path={service2.path}
                       image={service2.image}
                       ref={(el) => (service2Refs.current[index] = el)}
-                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
+                      onMouseEnter={() =>
+                        handleMouseEnter(index, service2.image)
+                      }
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
                 </div>
-                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
+
+                <div className="flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6">
                   {services2.slice(12, 14).map((service2, index) => (
                     <ServiceItem2
                       key={index}
@@ -486,7 +657,9 @@ const PSS = () => {
                       path={service2.path}
                       image={service2.image}
                       ref={(el) => (service2Refs.current[index] = el)}
-                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
+                      onMouseEnter={() =>
+                        handleMouseEnter(index, service2.image)
+                      }
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
@@ -497,24 +670,18 @@ const PSS = () => {
         </div>
       </section>
 
-
-
       <section>
-        < TestimonialsSection />
+        <TestimonialsSection />
       </section>
-
-
-
     </>
-  )
-}
-
+  );
+};
 
 const testimonials = [
   "We are thankful to the JEF Techno's team for clearing many of our doubts related to lightning protection. LPS audit was conducted for our plant that happened successfully.",
   "JEF supported us in providing very innovative and practical solutions to earthing and lightning protection systems. Every input from the team was with proper technical justification and in line with national & international standards.",
   "We have been associated with JEF Techno for the last 5 years. Product Quality and After Sales Service provided by them is up to the mark.",
-  "We have taken JEF’s technical expertise for Lightning Protection System for our Bangalore Warehouse. While working with them, we got to know that lightning protection is just not some product, it’s a complete solution."
+  "We have taken JEF’s technical expertise for Lightning Protection System for our Bangalore Warehouse. While working with them, we got to know that lightning protection is just not some product, it’s a complete solution.",
 ];
 
 function TestimonialsSection() {
@@ -523,9 +690,9 @@ function TestimonialsSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonialIndex((prevIndex) =>
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1,
       );
-    }, 3000); // Adjust the duration as needed
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -541,13 +708,16 @@ function TestimonialsSection() {
               alt="Background for testimonials section"
               className="object-cover absolute inset-0 size-full"
             />
+
             <div className="Testimonials gap-5 flex Y-axis-Testimonials relative flex-col max-w-full w-full md:w-[679px]">
               <h2 className="self-center text-base tracking-widest leading-snug">
                 TESTIMONIALS
               </h2>
+
               <h3 className="mt-8 text-2xl sm:text-3xl md:text-4xl font-normal uppercase tracking-widest max-md:max-w-full">
                 WHAT OUR CUSTOMERS SAY
               </h3>
+
               <div className="testimonial-slider mt-[5%]">
                 <p
                   className="testimonial-slide"
@@ -556,15 +726,21 @@ function TestimonialsSection() {
                   }}
                 >
                   {testimonials.map((text, index) => (
-                    <span key={index} className="testimonial-text text-gray-400">
+                    <span
+                      key={index}
+                      className="testimonial-text text-gray-400"
+                    >
                       {text}
                     </span>
                   ))}
                 </p>
               </div>
-              <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full   mx-auto">
-                <Link href={'/get-in-touch'}>
-                  <button className={`flex overflow-hidden text-sm justify-center bg-[#FF0000] items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
+
+              <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full mx-auto">
+                <Link href={"/get-in-touch"}>
+                  <button
+                    className={`flex overflow-hidden text-sm justify-center bg-[#FF0000] items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px]`}
+                  >
                     CONTACT US
                   </button>
                 </Link>
@@ -577,101 +753,106 @@ function TestimonialsSection() {
   );
 }
 
-
-
-
-const ServiceItem = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
-  const content = (
-    <div
-      ref={ref}
-      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+const ServiceItem = React.forwardRef(
+  ({ path, text, onMouseEnter, onMouseLeave }, ref) => {
+    const content = (
+      <div
+        ref={ref}
+        className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
         ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
-      onMouseEnter={() => {
-        if (text !== "") {
-          onMouseEnter();
-        }
-      }}
-      onMouseLeave={() => {
-        if (text !== "") {
-          onMouseLeave();
-        }
-      }}
-    >
-      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
-    </div>
-  );
+        onMouseEnter={() => {
+          if (text !== "") {
+            onMouseEnter();
+          }
+        }}
+        onMouseLeave={() => {
+          if (text !== "") {
+            onMouseLeave();
+          }
+        }}
+      >
+        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px]">
+          {text}
+        </span>
+      </div>
+    );
 
-  return path ? <Link href={path}>{content}</Link> : content;
-});
+    return path ? <Link href={path}>{content}</Link> : content;
+  },
+);
 
 ServiceItem.displayName = "ServiceItem";
 
-const ServiceItem2 = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
-  const content = (
-    <div
-      ref={ref}
-      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+const ServiceItem2 = React.forwardRef(
+  ({ path, text, onMouseEnter, onMouseLeave }, ref) => {
+    const content = (
+      <div
+        ref={ref}
+        className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
         ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
-      onMouseEnter={() => {
-        if (text !== "") {
-          onMouseEnter();
-        }
-      }}
-      onMouseLeave={() => {
-        if (text !== "") {
-          onMouseLeave();
-        }
-      }}
-    >
-      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
-    </div>
-  );
+        onMouseEnter={() => {
+          if (text !== "") {
+            onMouseEnter();
+          }
+        }}
+        onMouseLeave={() => {
+          if (text !== "") {
+            onMouseLeave();
+          }
+        }}
+      >
+        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px]">
+          {text}
+        </span>
+      </div>
+    );
 
-  return path ? <Link href={path}>{content}</Link> : content;
-});
+    return path ? <Link href={path}>{content}</Link> : content;
+  },
+);
 
 ServiceItem2.displayName = "ServiceItem2";
 
-
-
-
-
-
 function CarouselSection({ components }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(1); // Default to 1 for mobile
+  const [visibleCards, setVisibleCards] = useState(1);
+
   const totalCards = components.length;
 
   // Function to handle the right click (move forward)
+
   const handleCarouselClickRight = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex + 1) % totalCards; // Move forward one card
+      return (prevIndex + 1) % totalCards;
     });
   };
 
   // Function to handle the left click (move backward)
+
   const handleCarouselClickLeft = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex - 1 + totalCards) % totalCards; // Move backward one card
+      return (prevIndex - 1 + totalCards) % totalCards;
     });
   };
 
   // Update the number of visible cards based on screen size
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 640) {
-        setVisibleCards(1); // Mobile
+        setVisibleCards(1);
       } else if (window.innerWidth <= 1024) {
-        setVisibleCards(2); // Medium
+        setVisibleCards(2);
       } else {
-        setVisibleCards(3); // Large
+        setVisibleCards(3);
       }
     };
 
-    handleResize(); // Set initial value
-    window.addEventListener('resize', handleResize); // Listen for resize events
+    handleResize();
 
-    return () => window.removeEventListener('resize', handleResize); // Cleanup listener
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -680,9 +861,11 @@ function CarouselSection({ components }) {
         <h2 className="md:text-3xl text-2xl font-bold leading-none text-[#FF0000] uppercase">
           KEY COMPONENTS OF THE STUDY
         </h2>
+
         <div className="flex self-end flex-col min-h-[60px]">
           <div className="flex gap-5 items-start w-full max-w-[140px]">
             {/* Left Arrow Button */}
+
             <div className="flex justify-center items-center min-h-[60px] w-[60px]">
               <button onClick={handleCarouselClickLeft}>
                 <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch p-5 my-auto w-full border border-white border-solid basis-0 min-h-[60px] rounded-[60px]">
@@ -695,7 +878,9 @@ function CarouselSection({ components }) {
                 </div>
               </button>
             </div>
+
             {/* Right Arrow Button */}
+
             <div className="flex justify-center items-center min-h-[60px] w-[60px]">
               <button onClick={handleCarouselClickRight}>
                 <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[60px] min-h-[60px] rounded-[60px] w-[60px]">
@@ -713,55 +898,51 @@ function CarouselSection({ components }) {
       </div>
 
       {/* Carousel Section */}
+
       <div className="card-slider flex justify-center items-center mt-10 w-full overflow-hidden">
         {/* Carousel wrapper */}
+
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${(currentIndex * 100) / visibleCards}%)`, // Move based on currentIndex and visibleCards
-            width: `${totalCards * (100 / visibleCards)}%`, // Total width based on total cards and visible cards
+            transform: `translateX(-${(currentIndex * 100) / visibleCards}%)`,
+            width: `${totalCards * (100 / visibleCards)}%`,
           }}
         >
           {components.map((component) => (
             <div
               key={component.title}
-              className="Y-axis-card-anm flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start w-full "
+              className="Y-axis-card-anm flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start w-full"
               style={{
-                flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
+                flex: `0 0 ${100 / visibleCards}%`,
               }}
             >
-              <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
-              <h3 className="text-[#FF0000] font-normal w-[80vw] sm:w-[90%] text-2xl sm:text-start my-5 text-center">{component.title}</h3>
-              <p className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-lg max-w-screen-xl">{component.description}</p>
+              <img
+                src={component.imageSrc}
+                alt={`JEF UAE ${component.title}`}
+                className="h-[3rem]"
+              />
+
+              <h3 className="text-[#FF0000] font-normal w-[80vw] sm:w-[90%] text-2xl sm:text-start my-5 text-center">
+                {component.title}
+              </h3>
+
+              <p className="text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-lg max-w-screen-xl">
+                {component.description}
+              </p>
             </div>
-
-
           ))}
         </div>
       </div>
-
     </section>
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 const VerticalCarousel = () => {
   const benefitItems = [
-    "ABOUT power system studies",
+    "ABOUT Power System Studies",
     "List of Studies for Renewable Energy",
-    "For Industries",
+    "Industries & Applications",
     "Advanced System Studies",
     "Planning and Operations Studies",
     "Power System Protection Studies",
@@ -769,63 +950,84 @@ const VerticalCarousel = () => {
     "Power Quality Compliance Studies & Measurements",
   ];
 
-
   const cardContents = [
     {
-      imgSrc:
-        "/NavLogo/JEFLogo.svg",
-      title: "Why choose Us?",
+      imgSrc: "/NavLogo/JEFLogo.svg",
+
+      title: "Why Choose JEF UAE for Power System Studies",
+
       description:
         "With our patented & unique custom designed & developed automation tool, we offer unparalleled customer service & have consistently ‘delighted’ our customers with the quality, completeness and timeliness of our work product.",
     },
+
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+
       title: "List of Studies for Renewable Energy",
+
       description:
-        "Grid Integration Studies (for Solar, Wind, BESS, Hybrid, green hydrogen)|Steady State Analysis|Reactive Power Capability Analysis|Transient Studies|Grid Code Compliance Studies|Dynamic grid impact studies|Dynamic model acceptance test|Harmonic Analysis|Insulation Co-ordination Studies|Protection & Relay Co-ordination Studies|AC/DC Arc flash studies|Model Validation test"
+        "Grid Integration Studies (for Solar, Wind, BESS, Hybrid, green hydrogen)|Steady State Analysis|Reactive Power Capability Analysis|Transient Studies|Grid Code Compliance Studies|Dynamic grid impact studies|Dynamic model acceptance test|Harmonic Analysis|Insulation Co-ordination Studies|Protection & Relay Co-ordination Studies|AC/DC Arc flash studies|Model Validation test",
     },
+
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "For Industries",
+
+      title: "Industries & Applications",
+
       description:
-        "|Load Flow Studies|Short Circuit Studies|Protection & Relay Co-ordination Studies|AC/DC Arc Flash Studies|Harmonic Analysis|Motor Starting Study|Transient Stability|Insulation Co-ordination Studies"
+        "|Load Flow Studies|Short Circuit Studies|Protection & Relay Co-ordination Studies|AC/DC Arc Flash Studies|Harmonic Analysis|Motor Starting Study|Transient Stability|Insulation Co-ordination Studies",
     },
+
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+
       title: "Advanced System Studies",
+
       description:
-        "|Transmission Network Planning|Power System risk review|Sizing-citing of FACTS devices|HVDC interconnection studies"
+        "|Transmission Network Planning|Power System risk review|Sizing-citing of FACTS devices|HVDC interconnection studies",
     },
+
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Planning and operations studies",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42df8b2?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+
+      title: "Planning and Operations Studies",
+
       description:
-        "|Grid impact Studies for new power generation facilities|Grid code compliance studies|Studies for BESS and Hybrid Power Plant|Transmission Network expansion for master plan studies|HVDC and HVAC interconnection studies|Hosting capacity studies for RES integration|Islanding and load shedding studies|Sizing-citing of FACTS devices"
+        "|Grid impact Studies for new power generation facilities|Grid code compliance studies|Studies for BESS and Hybrid Power Plant|Transmission Network expansion for master plan studies|HVDC and HVAC interconnection studies|Hosting capacity studies for RES integration|Islanding and load shedding studies|Sizing-citing of FACTS devices",
     },
+
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "power system protection studies",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42df8b2?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+
+      title: "Power System Protection Studies",
+
       description:
-        "|Protection coordination study|Arc flash risk assessment|Event Analysis"
+        "|Protection coordination study|Arc flash risk assessment|Event Analysis",
     },
+
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Electromagnetic transient studies",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42df8b2?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+
+      title: "Electromagnetic Transient Studies",
+
       description:
-        "|Insulation Coordination|Temporary Overvoltage Studies|Switching Overvoltage Studies|Lightning Overvoltage Studies|Ferro-Resonance Studies|TRV-RRRV Studies|Transformer / Cable Energization & De-energization Studies|Transmission Line Reclosing Studies|VFTO Analysis"
+        "|Insulation Coordination|Temporary Overvoltage Studies|Switching Overvoltage Studies|Lightning Overvoltage Studies|Ferro-Resonance Studies|TRV-RRRV Studies|Transformer / Cable Energization & De-energization Studies|Transmission Line Reclosing Studies|VFTO Analysis",
     },
+
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "power quality compliance studies & measurements",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42df8b2?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+
+      title: "Power Quality Compliance Studies & Measurements",
+
       description:
-        "|Power factor correction|Harmonic analysis and measurements|Capacitor bank studies|Flicker and Voltage unbalance studies|Grid code compliance testing"
+        "|Power factor correction|Harmonic analysis and measurements|Capacitor bank studies|Flicker and Voltage unbalance studies|Grid code compliance testing",
     },
   ];
 
@@ -840,23 +1042,27 @@ const VerticalCarousel = () => {
       <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 px-5 md:px-12 lg:px-0 max-md:mt-10 max-md:w-full">
         <div className="flex flex-col lg:flex-row w-full xl:w-[95%] gap-5 max-md:flex-col">
           {/* Left Side: Benefit Items */}
+
           <div className="flex flex-col lg:w-[44%] max-md:ml-0 max-md:w-full">
             <ul className="flex flex-col lg:mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-full lg:w-[70%]">
               {benefitItems.map((item, index) => (
                 <li
                   key={index}
-                  className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                    ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
-                    : "h-auto text-xs 2xl:text-base"
-                    }`}
+                  className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+                    activeIndex === index
+                      ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
+                      : "h-auto text-xs 2xl:text-base"
+                  }`}
                   onClick={() => handleClick(index)}
                 >
                   {activeIndex === index && (
                     <div className="bg-red-500 w-1 h-full mr-4"></div>
                   )}
+
                   <div
-                    className={`xl:w-[80%] uppercase min-w-[20%] ${activeIndex === index ? "text-white" : "text-gray-400"
-                      }`}
+                    className={`xl:w-[80%] uppercase min-w-[20%] ${
+                      activeIndex === index ? "text-white" : "text-gray-400"
+                    }`}
                   >
                     {item}
                   </div>
@@ -866,38 +1072,47 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
+
           <div className="relative flex flex-col w-[56%] max-sm:h-[80vh] max-lg:h-[65vh] overflow-hidden max-md:ml-0 max-lg:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out w-full"
-              style={{ transform: `translateY(-${(activeIndex * 100) / 8}%)` }}
+              style={{
+                transform: `translateY(-${(activeIndex * 100) / 8}%)`,
+              }}
             >
               {cardContents.map((content, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-start text-2xl  md:text-3xl text-[#FF0000] mt-12 lg:mt-0 h-screen lg:w-full"
+                  className="flex flex-col items-start text-2xl md:text-3xl text-[#FF0000] mt-12 lg:mt-0 h-screen lg:w-full"
                 >
                   <img
                     loading="lazy"
                     src={content.imgSrc}
-                    alt={content.title}
-                    className="object-contain max-w-full  w-[6rem] 2xl:w-[124px] transition-opacity duration-500 ease-in-out"
+                    alt={`JEF UAE ${content.title}`}
+                    className="object-contain max-w-full w-[6rem] 2xl:w-[124px] transition-opacity duration-500 ease-in-out"
                   />
-                  <ul className="hidden mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] ">
+
+                  <ul className="hidden mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%]">
                     {benefitItems.slice(0, 1).map((item, index) => (
                       <li
                         key={index}
-                        className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                          ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
-                          : "h-auto text-base"
-                          }`}
+                        className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+                          activeIndex === index
+                            ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
+                            : "h-auto text-base"
+                        }`}
                         onClick={() => handleClick(index)}
                       >
                         {activeIndex === index && (
                           <div className="bg-red-500 w-1 h-full mr-4"></div>
                         )}
+
                         <div
-                          className={`w-[80%] uppercase min-w-[20%] ${activeIndex === index ? "text-white" : "text-gray-400"
-                            }`}
+                          className={`w-[80%] uppercase min-w-[20%] ${
+                            activeIndex === index
+                              ? "text-white"
+                              : "text-gray-400"
+                          }`}
                         >
                           {item}
                         </div>
@@ -905,17 +1120,16 @@ const VerticalCarousel = () => {
                     ))}
                   </ul>
 
-
                   <h2 className="2xl:mt-6 mt-4 lg:w-[80%] lg:text-2xl 2xl:text-3xl font-semibold sm:ml-5 lg:ml-0 tracking-[4.53px] uppercase w-full">
                     {content.title}
                   </h2>
+
                   <div className="mt-10 max-md:max-w-full">
                     <div className="flex gap-5 max-md:flex-col">
                       <div className="flex h-auto flex-col w-full max-md:w-full">
-                        {/* Splitting description by period and inserting line breaks with bullet */}
-
                         {content.description.split("|").map((sentence, idx) => {
                           const trimmedSentence = sentence.trim();
+
                           const defaultSentences = [
                             "Temporary Overvoltage Studies",
                             "Switching Overvoltage Studies",
@@ -927,16 +1141,20 @@ const VerticalCarousel = () => {
                             "VFTO Analysis",
                           ];
 
-                          const isDefaultLi = defaultSentences.includes(trimmedSentence);
+                          const isDefaultLi =
+                            defaultSentences.includes(trimmedSentence);
 
                           return (
                             <div
                               key={idx}
-                              className={`flex items-center ${isDefaultLi ? "ml-6" : ""}`}
+                              className={`flex items-center ${
+                                isDefaultLi ? "ml-6" : ""
+                              }`}
                             >
                               <span className="leading-none lg:-mt-[1.8%] 2xl:-mt-[0.5%] tracking-widest text-white max-md:max-w-full self-start">
-                                {idx > 0 && "•"} {/* Add bullet point for new lines */}
+                                {idx > 0 && "•"}
                               </span>
+
                               <p className="sm:ml-4 text-base lg:text-xs 2xl:text-base font-light 2xl:leading-7 tracking-widest text-white max-md:max-w-full">
                                 {trimmedSentence}
                               </p>
@@ -948,17 +1166,17 @@ const VerticalCarousel = () => {
                   </div>
                 </div>
               ))}
-
             </div>
           </div>
 
           {/* Additional Image Section */}
+
           <div className="ml-5 w-[45%] max-md:ml-0 max-md:w-full">
             <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
               <img
                 loading="lazy"
                 src="./SerivePage/Power System.png"
-                alt="Earthing/Grounding System Illustration"
+                alt="Power system studies engineering illustration"
                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
               />
             </div>
@@ -966,7 +1184,7 @@ const VerticalCarousel = () => {
         </div>
       </div>
     </section>
-  )
+  );
 };
 
-export default PSS
+export default PSS;

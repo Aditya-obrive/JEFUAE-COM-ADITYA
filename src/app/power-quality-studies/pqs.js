@@ -297,10 +297,14 @@ const PQS = () => {
     });
   }, [hoveredIndex, services2]);
 
-  // ✅ UPDATED BREADCRUMB
+  // UPDATED BREADCRUMB
   const navItems = [
     { label: "HOME", href: "/", isActive: true },
-    { label: "SERVICES", href: "/power-quality-studies", isActive: true },
+    {
+      label: "SERVICES",
+      href: "/power-quality-studies",
+      isActive: true,
+    },
     {
       label: "POWER QUALITY STUDIES",
       href: "/power-quality-studies",
@@ -315,11 +319,11 @@ const PQS = () => {
   };
 
   const benefitItems = [
-    "ABOUT Earthing studies",
-    "What is an Earthing/Grounding System Studies",
-    "Earthing/Grounding System Studies",
+    "JEF’s value add",
+    "Importance of Power Quality Studies",
+    "Our Approach to Power Quality Study Service",
     "Detailed Study Reports and Analysis",
-    "Benefits of Professional Earthing/Grounding System Studies",
+    "Benefits of Professional Power Quality Studies",
   ];
 
   const components = [
@@ -373,8 +377,15 @@ const PQS = () => {
 
           <div className="Y-axis-text-Title-Service4 flex inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
             <h1 className="uppercase lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-              Power Quality Studies
+              POWER QUALITY STUDIES IN UAE
             </h1>
+
+            <p className="Y-axis-text-Title-Service4 mt-8 max-w-5xl text-base md:text-lg lg:text-xl font-light leading-7 text-white max-md:max-w-full">
+              Power Quality Studies refers to the engineering assessment,
+              analysis or service used to improve electrical safety, reliability
+              and compliance. JEF UAE applies project-specific data, recognized
+              engineering methods and documented recommendations.
+            </p>
 
             <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900 max-md:mt-10">
               <Link href={"/get-in-touch"}>
@@ -443,18 +454,18 @@ const PQS = () => {
           <img
             loading="lazy"
             src="./SerivePage/PowerQualityBulb.png"
-            alt="PowerQualityBulb"
+            alt="Power Quality Studies Bulb"
             className="object-contain w-16 aspect-square"
           />
         </div>
 
         <header className="ContactUsAnimation flex p-4 flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-          <h1 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
+          <h2 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
             <div className="w-full max-md:max-w-full">
               Expert Power Quality Studies and <br />
               Analysis Services
             </div>
-          </h1>
+          </h2>
 
           <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">
             At JEF, we specialize in providing top-notch Power Quality Studies
@@ -506,7 +517,7 @@ const PQS = () => {
                 <img
                   ref={imgRef}
                   src={backgroundImage}
-                  alt=""
+                  alt="Power quality service background"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
@@ -563,7 +574,7 @@ const PQS = () => {
                 <img
                   ref={imgRef}
                   src={backgroundImage}
-                  alt=""
+                  alt="Power quality service background"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
@@ -699,7 +710,11 @@ const ServiceItem = React.forwardRef(
       <div
         ref={ref}
         className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+        ${
+          text === ""
+            ? "bg-transparent"
+            : "border border-solid hover:bg-red-600"
+        }`}
         onMouseEnter={() => {
           if (text !== "") {
             onMouseEnter();
@@ -729,7 +744,11 @@ const ServiceItem2 = React.forwardRef(
       <div
         ref={ref}
         className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+        ${
+          text === ""
+            ? "bg-transparent"
+            : "border border-solid hover:bg-red-600"
+        }`}
         onMouseEnter={() => {
           if (text !== "") {
             onMouseEnter();
@@ -872,6 +891,7 @@ const VerticalCarousel = () => {
     "Importance of Power Quality Studies",
     "Our Approach to Power Quality Study Service",
     "Detailed Study Reports and Analysis",
+    "Benefits of Professional Power Quality Studies",
   ];
 
   const cardContents = [
@@ -883,7 +903,7 @@ const VerticalCarousel = () => {
     },
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfbdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Importance of Power Quality Studies",
       description: `Power Quality Studies are crucial for maintaining the integrity and performance of your electrical systems. They help in:|Identifying potential power quality issues that can cause tripping, equipment
 failures and/or inefficiencies.|Ensuring compliance with international standards such as IEEE 1159, IEEE
@@ -898,16 +918,17 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
     },
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Detailed Study Reports and Analysis",
-      description: `Get in touch with us to discover the unique value addition that our expert team consistently deliver to our customer.`,
+      description:
+        "Get in touch with us to discover the unique value addition that our expert team consistently deliver to our customer.",
     },
     {
       imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Benefits of Professional Earthing/Grounding System Studies",
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Benefits of Professional Power Quality Studies",
       description:
-        "| Enhanced Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability:Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
+        "|Enhanced Safety: Reducing the risk of electrical hazards and protecting personnel and equipment.|Operational Reliability: Ensuring uninterrupted operations and protecting critical infrastructure.|Standards Compliance: Meeting international and local regulations for power quality.|Cost Savings: Preventing costly equipment damage and downtime through effective power quality assessment and mitigation.",
     },
   ];
 
@@ -1060,7 +1081,7 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
               <img
                 loading="lazy"
                 src="./SerivePage/Power Quality.png"
-                alt="Earthing/Grounding System Illustration"
+                alt="Power Quality Studies Illustration"
                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
               />
             </div>
