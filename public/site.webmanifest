@@ -1,0 +1,15 @@
+{
+  "name": "JEF UAE",
+  "short_name": "JEF UAE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2c2d2f",
+  "theme_color": "#2c2d2f",
+  "icons": [
+    {
+      "src": "/HomePageImg/JefTechno_logo_ 2.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

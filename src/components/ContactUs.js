@@ -12,6 +12,10 @@ const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
+  const [company, setCompany] = useState("");
+  const [projectLocation, setProjectLocation] = useState("");
+  const [serviceNeeded, setServiceNeeded] = useState("");
+  const [message, setMessage] = useState("");
   const [showConfirmation, setShowConfirmation] = useState(false);
 
   const toggleConfirmation = () => {
@@ -45,6 +49,10 @@ const ContactUs = () => {
       name,
       email,
       mobile,
+      company,
+      projectLocation,
+      serviceNeeded,
+      message,
     };
 
     toggleConfirmation();
@@ -63,6 +71,10 @@ const ContactUs = () => {
     setName("");
     setEmail("");
     setMobile("");
+    setCompany("");
+    setProjectLocation("");
+    setServiceNeeded("");
+    setMessage("");
 
     try {
       const response = await axios.post(
@@ -117,6 +129,22 @@ const ContactUs = () => {
                   required
                   onChange={(e) => setName(e.target.value)}
                 />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="company" className="sr-only">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company" className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200" onChange={(e) => setCompany(e.target.value)} />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="project-location" className="sr-only">Project Location</label>
+                <input type="text" id="project-location" name="projectLocation" placeholder="Project Location" className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200" onChange={(e) => setProjectLocation(e.target.value)} />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="service-needed" className="sr-only">Service Needed</label>
+                <input type="text" id="service-needed" name="serviceNeeded" placeholder="Service Needed" className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200" onChange={(e) => setServiceNeeded(e.target.value)} />
+              </div>
+              <div className="mb-6">
+                <label htmlFor="message" className="sr-only">Project Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200" onChange={(e) => setMessage(e.target.value)} />
               </div>
               <div className="mb-6">
                 <label className="sr-only">Email</label>

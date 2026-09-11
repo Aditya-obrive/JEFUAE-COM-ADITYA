@@ -10,6 +10,32 @@ import ContactUs from '@/components/ContactUs';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const homeDescription = 'Electrical engineering consulting and safety studies in UAE & GCC. JEF delivers technology-enabled electrical engineering expertise for industrial, utility and infrastructure projects.';
+const homeKeywords = [
+  'Electrical Engineering Consulting UAE', 'Electrical Engineering Consulting services', 'Electrical Engineering Consulting consultants', 'Electrical Engineering Consulting company UAE', 'Electrical Engineering Consulting Abu Dhabi', 'Electrical Engineering Consulting Dubai', 'Electrical Engineering Consulting GCC', 'electrical engineering consultants UAE', 'industrial electrical studies', 'electrical safety engineering', 'power system reliability', 'best Electrical Engineering Consulting consultants in UAE', 'Electrical Engineering Consulting services in Abu Dhabi', 'Electrical Engineering Consulting company in Dubai', 'Electrical Engineering Consulting for oil and gas facilities', 'Electrical Engineering Consulting for utilities', 'Electrical Engineering Consulting for renewable energy projects', 'Electrical Engineering Consulting for industrial plants', 'global Electrical Engineering Consulting engineering consultancy', 'electrical safety', 'system reliability', 'engineering simulation', 'compliance study', 'technical audit', 'risk assessment', 'testing and measurement', 'design verification', 'commissioning support', 'engineering report',
+];
+
+const homeSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://jefuae.com/' }],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://jefuae.com/#webpage',
+      url: 'https://jefuae.com/',
+      name: 'Electrical Engineering Consultants UAE & GCC | JEF UAE',
+      description: homeDescription,
+      isPartOf: { '@id': 'https://jefuae.com/#website' },
+      about: { '@id': 'https://jefuae.com/#organization' },
+      inLanguage: 'en',
+      dateModified: '2026-09-11',
+    },
+  ],
+};
+
 // Menu items for the navbar
 const menuItems = [
   { label: 'Home', hasDropdown: false },
@@ -704,6 +730,7 @@ export default function Home() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} />
 
       {!showVideo}
 

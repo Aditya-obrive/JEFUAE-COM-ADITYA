@@ -57,8 +57,13 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/HomePageImg/JefTechno_logo_ 2.png",
+    icon: [
+      { url: "/NavLogo/JEFLogo.svg", type: "image/svg+xml" },
+      { url: "/HomePageImg/JefTechno_logo_ 2.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/HomePageImg/JefTechno_logo_ 2.png",
   },
+  manifest: "/site.webmanifest",
 
   verification: {
     google: 'NdAWjzLB8pCxgjiIspNZg8SmkWugCBbH2BsvoqKQjMM',
@@ -84,7 +89,7 @@ export default function RootLayout({ children }) {
     `}
   </Script>
 
-  {/* Organization Schema */}
+  {/* Organization and website schema */}
   <Script
     id="organization-schema"
     type="application/ld+json"
@@ -92,30 +97,51 @@ export default function RootLayout({ children }) {
   >
     {JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "JEF UAE",
-      url: "https://www.jefuae.com/",
-      logo: "https://www.jefuae.com/HomePageImg/JefTechno_logo_ 2.png",
-      description:
-        "Engineering solutions in earthing, lightning protection, power system studies, EMI/EMC and electrical safety systems across UAE and Middle East.",
-      telephone: "+971552447290",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Abu Dhabi",
-        addressRegion: "Abu Dhabi",
-        addressCountry: "AE"
-      },
-      sameAs: [
-        "https://www.linkedin.com/showcase/jef-engineering-services-middle-east/"
-      ],
-      contactPoint: [
+      "@graph": [
         {
-          "@type": "ContactPoint",
-          contactType: "customer service",
+          "@type": "ProfessionalService",
+          "@id": "https://www.jefuae.com/#organization",
+          name: "JEF UAE",
+          url: "https://www.jefuae.com/",
+          logo: "https://www.jefuae.com/HomePageImg/JefTechno_logo_ 2.png",
+          description:
+            "Technology-enabled electrical engineering company providing earthing, lightning protection, power system, power quality, instrumentation earthing, EMI/EMC and root cause analysis services.",
+          foundingDate: "1994",
+          areaServed: ["United Arab Emirates", "GCC", "Middle East", "Global"],
+          knowsAbout: [
+            "Earthing and Grounding",
+            "Lightning Protection",
+            "Power System Studies",
+            "Power Quality",
+            "Instrumentation Earthing",
+            "EMI/EMC",
+            "Root Cause Analysis"
+          ],
           telephone: "+971552447290",
-          email: "info@jefuae.com",
-          areaServed: "AE",
-          availableLanguage: ["English", "Arabic"]
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Abu Dhabi",
+            addressRegion: "Abu Dhabi",
+            addressCountry: "AE"
+          },
+          sameAs: [
+            "https://www.linkedin.com/showcase/jef-engineering-services-middle-east/"
+          ],
+          contactPoint: [{
+            "@type": "ContactPoint",
+            contactType: "customer service",
+            telephone: "+971552447290",
+            email: "info@jefuae.com",
+            areaServed: "AE",
+            availableLanguage: ["English", "Arabic"]
+          }]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.jefuae.com/#website",
+          url: "https://www.jefuae.com/",
+          name: "JEF UAE",
+          publisher: { "@id": "https://www.jefuae.com/#organization" }
         }
       ]
     })}

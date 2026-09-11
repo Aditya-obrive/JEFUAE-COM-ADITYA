@@ -1,13 +1,14 @@
 'use client';
-
 import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MainFooter = () => {
+    const pathname = usePathname();
     useEffect(() => {
         // Select all elements with the 'X-axis-anm' class and apply staggered animation
         gsap.fromTo(
@@ -67,6 +68,38 @@ const MainFooter = () => {
         { name: 'Jobs', path: '/careers' }
     ];
 
+    const faqPathByPage = {
+        '/': '/electrical-engineering-consulting/faq',
+        '/electrical-engineering-consulting/faq': '/electrical-engineering-consulting/faq',
+        '/about-us': '/about-us/faq',
+        '/about-us/faq': '/about-us/faq',
+        '/leadership-team': '/leadership-team/faq',
+        '/leadership-team/faq': '/leadership-team/faq',
+        '/industries/renewableenergy': '/renewable-energy-grid-studies/faq',
+        '/renewable-energy-grid-studies/faq': '/renewable-energy-grid-studies/faq',
+        '/industries/oilandgas': '/electrical-engineering-oil-and-gas/faq',
+        '/electrical-engineering-oil-and-gas/faq': '/electrical-engineering-oil-and-gas/faq',
+        '/industries/powerutilities': '/power-utility-engineering-studies/faq',
+        '/power-utility-engineering-studies/faq': '/power-utility-engineering-studies/faq',
+        '/industries/manufacturingplant': '/manufacturing-plant-electrical-studies/faq',
+        '/manufacturing-plant-electrical-studies/faq': '/manufacturing-plant-electrical-studies/faq',
+        '/industries/processplant': '/process-plant-electrical-studies/faq',
+        '/process-plant-electrical-studies/faq': '/process-plant-electrical-studies/faq',
+        '/industries/commercialbuilding': '/commercial-building-electrical-safety/faq',
+        '/commercial-building-electrical-safety/faq': '/commercial-building-electrical-safety/faq',
+    };
+
+    // Normalize the pathname so the FAQ link works with or without a trailing slash.
+    const normalizedPathname = pathname?.replace(/\/+$/, '') || '/';
+    const isFaqPage = normalizedPathname.endsWith('/faq');
+    const faqPath = faqPathByPage[normalizedPathname];
+    const internalLinks = [
+        {
+            name: 'FAQ',
+            path: faqPath || '/html-sitemap',
+        },
+    ];
+
 
     return (
         <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
@@ -76,11 +109,9 @@ const MainFooter = () => {
                 <Section title="Locations" items={itemsLocation} />
                 <Section title="Industries" items={itemsBusiness} />
                 <Section title="Careers" items={itemsCareers} />
+                <Section title="Internal Links" items={internalLinks} />
             </div>
-            <div className='lg:hidden'>
-                < FAQComponent />
-
-            </div>
+            <FAQComponent pathname={pathname} />
             <Footer />
         </main>
     );
@@ -157,7 +188,56 @@ function Section({ title, items }) {
 // -----------------------------------------------------------------------------------------------------
 
 
-const FAQComponent = () => {
+const pageFaqs = {};
+
+const FAQComponent = ({ pathname }) => {
+    const pageQuestions = pageFaqs[pathname] || [];
+    const [openIndex, setOpenIndex] = useState(-1);
+
+    if (!pageQuestions.length) return null;
+
+    const faqData = pageQuestions.map(([question, answer]) => ({ question, answer }));
+
+    /*
+     * Add future page FAQs to pageFaqs above, for example:
+     * '/power-system-studies': powerSystemFaqs,
+     * where powerSystemFaqs is an array of [question, answer] pairs.
+     */
+    return (
+        <section className="global-footer-faq" aria-labelledby="global-footer-faq-title">
+            <div className="global-footer-faq-inner">
+                <p className="global-footer-faq-kicker">TECHNICAL QUESTIONS, CLEAR ANSWERS</p>
+                <h2 id="global-footer-faq-title">FAQS</h2>
+                <div className="global-footer-faq-grid">
+                    {faqData.map((item, index) => (
+                        <FooterFaqItem
+                            key={item.question}
+                            question={item.question}
+                            answer={item.answer}
+                            isOpen={openIndex === index}
+                            onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
+                        />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+};
+
+const FooterFaqItem = ({ question, answer, isOpen, onToggle }) => (
+    <article className={`global-footer-faq-item ${isOpen ? 'is-open' : ''}`}>
+        <h3>
+            <button type="button" onClick={onToggle} aria-expanded={isOpen}>
+                <span>{question}</span>
+                <span aria-hidden="true">⌄</span>
+            </button>
+        </h3>
+        {isOpen && <p>{answer}</p>}
+    </article>
+);
+
+/* Legacy navigation accordion retained for backwards compatibility with existing imports. */
+const LegacyFAQComponent = () => {
     const [faqData, setFaqData] = useState([
         {
             question: "ABOUT",

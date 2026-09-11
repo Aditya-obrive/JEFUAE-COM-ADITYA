@@ -146,7 +146,7 @@ function CommercialBuilding() {
         { image: '', text: '', data: [], path: '' },
         { image: '', text: '', data: [], path: '' },
         { image: './HomePageImg/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', data: [{ label: 'Total Projects', value: 66 }, { label: 'Middle East', value: 30 }], path: '/power-quality-studies' },
-        { image: './HomePageImg/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'Middle East', value: "08" }], path: '/instrumentation-earthing-studies' },
+        { image: '/HomePageImg/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'Middle East', value: "08" }], path: '/instrumentation-earthing-studies' },
         { image: '', text: '', data: [], path: '' },
         { image: '', text: '', data: [], path: '' },
         { image: '', text: '', data: [], path: '' },
@@ -372,13 +372,13 @@ function CommercialBuilding() {
 
 
 
-const NavigationItem = ({ text, isActive }) => (
+const NavigationItem = ({ text, path, isActive }) => (
     <div className="flex items-center self-stretch my-auto">
         <div
             className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase ${isActive ? 'text-white' : 'text-[#FF0000]'
                 }`}
         >
-            {text}
+            {path ? <Link href={path}>{text}</Link> : text}
         </div>
         {!isActive && (
             <div className="flex flex-col self-stretch px-2.5 my-auto w-[27px]">
@@ -398,9 +398,9 @@ const NavigationItem = ({ text, isActive }) => (
 );
 
 const navigationItems = [
-    { text: 'HOME', isActive: false },
-    { text: 'Industries', isActive: false },
-    { text: 'Commercial Building', isActive: true },
+    { text: 'HOME', path: '/', isActive: false },
+    { text: 'INDUSTRIES', path: '/industries/commercialbuilding', isActive: false },
+    { text: 'COMMERCIAL BUILDING', path: '/industries/commercialbuilding', isActive: true },
 ];
 
 const Navigation = () => (

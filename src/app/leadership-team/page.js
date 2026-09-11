@@ -1,7 +1,7 @@
 import ContactUs from '@/components/ContactUs';
 
 export const metadata = {
-  title: "Leadership Team | JEF UAE Electrical Engineering Experts Abu Dhabi",
+  title: "JEF Leadership Team | JEF UAE",
 
   description:
     "Meet the leadership team of JEF UAE — experienced electrical engineering experts in Abu Dhabi delivering earthing studies, lightning protection, power system studies, and safety solutions across UAE and global industries.",
@@ -23,6 +23,12 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 
   openGraph: {
@@ -39,6 +45,46 @@ export const metadata = {
     "geo.position": "24.4539;54.3773",
     "ICBM": "24.4539, 54.3773",
   },
+};
+
+const leadershipSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ProfessionalService',
+      '@id': 'https://jefuae.com/#organization',
+      name: 'JEF UAE',
+      url: 'https://jefuae.com/',
+      description: 'Technology-enabled electrical engineering company serving industrial, utility and infrastructure projects.',
+      foundingDate: '1994',
+      areaServed: ['United Arab Emirates', 'GCC', 'Middle East', 'Global'],
+      knowsAbout: ['Electrical Engineering', 'Earthing', 'Lightning Protection', 'Power System Studies', 'Power Quality', 'EMI/EMC'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://jefuae.com/#website',
+      url: 'https://jefuae.com/',
+      name: 'JEF UAE',
+      publisher: { '@id': 'https://jefuae.com/#organization' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://jefuae.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Leadership Team', item: 'https://jefuae.com/leadership-team' },
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://jefuae.com/leadership-team#webpage',
+      url: 'https://jefuae.com/leadership-team',
+      name: 'JEF Leadership Team',
+      description: 'JEF UAE leadership and electrical engineering expertise.',
+      isPartOf: { '@id': 'https://jefuae.com/#website' },
+      about: { '@id': 'https://jefuae.com/#organization' },
+      inLanguage: 'en',
+    },
+  ],
 };
 
 export default function Team() {
@@ -180,6 +226,7 @@ export default function Team() {
 
     return (
         <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(leadershipSchema) }} />
             <main className="flex flex-col min-h-screen bg-neutral-100">
                 <header className="relative h-screen overflow-hidden">
                     <img
