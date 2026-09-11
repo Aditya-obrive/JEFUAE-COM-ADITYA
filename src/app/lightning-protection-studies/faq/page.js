@@ -178,7 +178,7 @@ export default function LightningProtectionFAQ() {
   };
 
   return (
-    <main className="min-h-screen bg-[#292a2c] text-white">
+    <main className="min-h-screen bg-[#292a2c] text-white pt-32 md:pt-40">
       {/* Breadcrumb */}
       <div className="bg-[#1d1d1d] px-6 md:px-16 lg:px-32 py-5">
         <div className="flex items-center gap-3 text-xs tracking-[2px] uppercase">
