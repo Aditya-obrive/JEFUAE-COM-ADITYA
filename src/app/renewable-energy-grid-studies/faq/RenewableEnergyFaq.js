@@ -95,7 +95,7 @@ export default function RenewableEnergyFaq({
         <Link href="/">HOME</Link>
         {showParentBreadcrumb && <><span>›</span><Link href={breadcrumbPath}>{breadcrumbLabel}</Link></>}
         <span>›</span>
-        <span className="current">FAQ</span>
+        <span className="current">FAQs</span>
       </nav>
 
       <section className="renewable-faq-content">
