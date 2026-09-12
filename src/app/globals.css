@@ -132,6 +132,7 @@ button{
 .renewable-faq-page {
   background: #2c2d2f;
   color: #f8f8f8;
+  font-family: var(--font-montserrat), sans-serif;
   min-height: 100vh;
 }
 
@@ -246,7 +247,9 @@ button{
   border: 0;
   color: #e8edf0;
   display: flex;
-  font: inherit;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   gap: 18px;
   justify-content: space-between;
   line-height: 1.5;
@@ -255,7 +258,7 @@ button{
   text-align: left;
   width: 100%;
 }
-.renewable-faq-item button:hover { color: #fff; }
+.renewable-faq-item button:hover { color: #b8c5d2; }
 .renewable-faq-chevron {
   border-bottom: 2px solid #ff0000;
   border-right: 2px solid #ff0000;
@@ -269,6 +272,7 @@ button{
 .renewable-faq-answer { border-top: 1px solid #333435; }
 .renewable-faq-answer p {
   color: #aeb8c0;
+  font-family: var(--font-montserrat), sans-serif;
   font-size: 15px;
   line-height: 1.95;
   margin: 0;
@@ -307,6 +311,7 @@ button{
 /* Page-aware FAQ block rendered by the global footer */
 .global-footer-faq {
   background: #2c2d2f;
+  font-family: var(--font-montserrat), sans-serif;
   padding: 82px 24px 96px;
   width: 100%;
 }
@@ -347,7 +352,9 @@ button{
   border: 0;
   color: inherit;
   display: flex;
-  font: inherit;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   gap: 15px;
   justify-content: space-between;
   line-height: 1.5;
@@ -356,6 +363,7 @@ button{
   text-align: left;
   width: 100%;
 }
+.global-footer-faq-item button:hover { color: #b8c5d2; }
 .global-footer-faq-item button span:last-child {
   color: #ff0000;
   font-size: 23px;
