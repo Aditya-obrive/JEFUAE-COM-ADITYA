@@ -27,13 +27,18 @@ function formatSegment(segment) {
 export default function Breadcrumbs() {
   const pathname = usePathname() || '/';
   const segments = pathname.split('/').filter(Boolean);
+  const breadcrumbSegments = pathname.toLowerCase() === '/home/faq'
+    ? [{ segment: 'faq', href: '/home/faq' }]
+    : segments.map((segment, index) => ({
+      segment,
+      href: `/${segments.slice(0, index + 1).join('/')}`,
+    }));
 
   return (
     <nav className="renewable-faq-breadcrumb" aria-label="Breadcrumb">
       <Link href="/">HOME</Link>
-      {segments.map((segment, index) => {
-        const href = `/${segments.slice(0, index + 1).join('/')}`;
-        const isCurrent = index === segments.length - 1;
+      {breadcrumbSegments.map(({ segment, href }, index) => {
+        const isCurrent = index === breadcrumbSegments.length - 1;
 
         return (
           <span className="breadcrumb-segment" key={href}>
