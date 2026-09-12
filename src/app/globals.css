@@ -134,7 +134,19 @@ button{
   color: #f8f8f8;
   font-family: var(--font-montserrat), sans-serif;
   min-height: 100vh;
-  padding-top: 150px;
+  padding-top: 203px;
+}
+
+/* FAQ header structure from the reference: tall centered masthead above the breadcrumb bar. */
+.faq-page-navbar {
+  height: 193px;
+}
+.faq-page-navbar > div {
+  justify-content: center;
+  padding-top: 0;
+}
+.faq-page-navbar header {
+  height: 100%;
 }
 
 .renewable-faq-hero {
@@ -295,6 +307,7 @@ button{
 
 @media (max-width: 900px) {
   .renewable-faq-page { padding-top: 100px; }
+  .faq-page-navbar { height: 100px; }
   .renewable-faq-hero { min-height: 480px; }
   .renewable-faq-hero-content { width: calc(100% - 48px); padding-bottom: 42px; }
   .renewable-faq-content { padding: 65px 24px 90px; }

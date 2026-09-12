@@ -128,7 +128,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`flex fixed w-full z-[60] overflow-hidden flex-col transition-colors duration-900 ${scrollNav || activeSection
+            className={`flex fixed w-full z-[60] overflow-hidden flex-col transition-colors duration-900 ${pathname?.endsWith('/faq') ? 'faq-page-navbar' : ''} ${scrollNav || activeSection
                 ? 'bg-stone-800'
                 : pathname === '/' || pathname === '/about-us' || pathname === '/leadership-team'
                     ? 'lg:bg-transparent'
