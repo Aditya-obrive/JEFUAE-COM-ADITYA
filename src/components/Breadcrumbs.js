@@ -16,7 +16,7 @@ const specialLabels = {
   'smartdigitalization': 'Smart Digitalization',
 };
 
-const mainNavigationSlugs = new Set(['about-us', 'about', 'industries', 'our-business', 'business', 'blog', 'blogs']);
+const mainNavigationSlugs = new Set(['about', 'industries', 'our-business', 'business', 'blog', 'blogs']);
 
 function formatSegment(segment) {
   const decoded = decodeURIComponent(segment).replace(/([a-z])([A-Z])/g, '$1 $2');
