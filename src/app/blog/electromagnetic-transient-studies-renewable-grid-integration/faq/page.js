@@ -201,7 +201,7 @@ export default function ElectromagneticTransientFAQ() {
         </Link>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-12 mb-6 tracking-wide">
+        <h1 className="mt-10 text-3xl md:text-5xl font-bold uppercase tracking-[2px]">
           FREQUENTLY ASKED QUESTIONS
         </h1>
 
@@ -218,15 +218,23 @@ export default function ElectromagneticTransientFAQ() {
             const isOpen = openIndex === index;
 
             return (
-              <div key={index} className="border border-gray-600 self-start">
+              <div
+                key={index}
+                className="bg-[#202020] overflow-hidden border border-[#292929]"
+              >
+                {/* Question */}
                 <button
+                  type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between text-left px-4 py-6 hover:bg-[#303133] transition-colors"
+                  className="w-full min-h-[90px] px-6 py-5 flex items-center justify-between text-left hover:bg-[#252525] transition"
+                  aria-expanded={isOpen}
                 >
-                  <span className="text-sm md:text-base font-semibold pr-6">
-                    {faq.question}
+                  <span className="text-sm md:text-base text-gray-300 pr-4">
+                    {faq.question.charAt(0) +
+                      faq.question.slice(1).toLowerCase()}
                   </span>
 
+                  {/* Red CSS Chevron */}
                   <span
                     className={`w-2 h-2 border-r-2 border-b-2 border-[#ff0000] shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-[-135deg]" : "rotate-45"
@@ -234,9 +242,10 @@ export default function ElectromagneticTransientFAQ() {
                   ></span>
                 </button>
 
+                {/* Answer */}
                 {isOpen && (
-                  <div className="border-t border-gray-600 px-4 py-5">
-                    <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  <div className="border-t border-[#333] px-6 py-6">
+                    <p className="text-sm md:text-base leading-7 text-gray-400">
                       {faq.answer}
                     </p>
                   </div>

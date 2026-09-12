@@ -5,169 +5,169 @@ import Link from "next/link";
 
 const faqs = [
   {
-    question: "WHAT IS AC INTERFERENCE STUDIES OIL GAS?",
+    question: "What is AC interference studies oil gas?",
     answer:
       "Ac Interference Studies Oil Gas refers to the engineering assessment, analysis or service used to improve electrical safety, reliability and compliance. JEF UAE applies project-specific data, recognized engineering methods and documented recommendations.",
   },
   {
-    question: "WHY IS AC INTERFERENCE STUDIES OIL GAS IMPORTANT?",
+    question: "Why is AC interference studies oil gas important?",
     answer:
       "It helps identify technical risks before they lead to unsafe conditions, equipment damage, non-compliance or costly downtime, while supporting reliable operation and informed engineering decisions.",
   },
   {
-    question: "WHAT STANDARDS APPLY TO AC INTERFERENCE STUDIES OIL GAS?",
+    question: "What standards apply to AC interference studies oil gas?",
     answer:
       "The exact requirements depend on the project. Typical references include IEC 61000 series, IEEE guidance and project-specific EMC/AC-interference criteria. JEF confirms the governing client, utility and authority requirements before finalizing the study basis.",
   },
   {
     question:
-      "DOES JEF PROVIDE AC INTERFERENCE STUDIES OIL GAS ACROSS THE UAE?",
+      "Does JEF provide AC interference studies oil gas across the UAE?",
     answer:
       "Yes. JEF UAE supports projects across the United Arab Emirates and can serve wider GCC, Middle East and international project requirements subject to scope and site needs.",
   },
   {
-    question: "WHICH INDUSTRIES USE AC INTERFERENCE STUDIES OIL GAS?",
+    question: "Which industries use AC interference studies oil gas?",
     answer:
       "Typical sectors include oil & gas, power utilities, manufacturing, process plants, commercial buildings, infrastructure and renewable energy.",
   },
   {
     question:
-      "WHAT INFORMATION IS NEEDED TO START AC INTERFERENCE STUDIES OIL GAS?",
+      "What information is needed to start AC interference studies oil gas?",
     answer:
       "Typical inputs include single-line diagrams, equipment data, layouts, operating scenarios, existing study reports, test data and applicable client or utility criteria.",
   },
   {
     question:
-      "WHAT ARE THE TYPICAL DELIVERABLES FOR AC INTERFERENCE STUDIES OIL GAS?",
+      "What are the typical deliverables for AC interference studies oil gas?",
     answer:
       "Deliverables can include assumptions and methodology, calculations or simulations, findings, risk ranking, compliance observations, engineering recommendations and a final technical report.",
   },
   {
-    question: "HOW LONG DOES AC INTERFERENCE STUDIES OIL GAS TAKE?",
+    question: "How long does AC interference studies oil gas take?",
     answer:
       "Schedule depends on project size, data readiness, site access, modelling complexity and review cycles. A confirmed timeline should be issued after scope and inputs are reviewed.",
   },
   {
-    question: "HOW MUCH DOES AC INTERFERENCE STUDIES OIL GAS COST IN THE UAE?",
+    question: "How much does AC interference studies oil gas cost in the UAE?",
     answer:
       "Pricing depends on system size, number of scenarios, site work, modelling effort and deliverables. JEF can provide a project-specific commercial proposal after reviewing the scope.",
   },
   {
     question:
-      "CAN JEF REVIEW AN EXISTING AC INTERFERENCE STUDIES OIL GAS REPORT?",
+      "Can JEF review an existing AC interference studies oil gas report?",
     answer:
       "Yes. A peer review can check assumptions, input data, methodology, standards, model settings, results and whether recommendations are technically practical.",
   },
   {
     question:
-      "CAN AC INTERFERENCE STUDIES OIL GAS BE PERFORMED FOR AN EXISTING FACILITY?",
+      "Can AC interference studies oil gas be performed for an existing facility?",
     answer:
       "Yes. Existing facilities can be assessed using available drawings, operating data, field measurements and site observations, with gaps documented before analysis.",
   },
   {
     question:
-      "CAN AC INTERFERENCE STUDIES OIL GAS SUPPORT A NEW PROJECT OR EXPANSION?",
+      "Can AC interference studies oil gas support a new project or expansion?",
     answer:
       "Yes. Studies are valuable during concept, FEED, detailed design, expansion and commissioning because risks can be addressed before equipment and layouts are finalized.",
   },
   {
-    question: "DOES JEF SUPPORT EPC CONSULTANTS AND CONTRACTORS?",
+    question: "Does JEF support EPC consultants and contractors?",
     answer:
       "Yes. JEF can work with owners, developers, EPCs, consultants, OEMs and contractors as a specialist engineering partner for defined study packages.",
   },
   {
     question:
-      "HOW DOES JEF IMPROVE AEO-READY TECHNICAL CONTENT FOR AC INTERFERENCE STUDIES OIL GAS?",
+      "How does JEF improve AEO-ready technical content for AC interference studies oil gas?",
     answer:
       "Use concise definitions, standards references, structured FAQs, clear methodology, quantified experience where verified, and schema markup so search and AI systems can extract reliable answers.",
   },
   {
     question:
-      "WHAT MAKES A HIGH-QUALITY AC INTERFERENCE STUDIES OIL GAS REPORT?",
+      "What makes a high-quality AC interference studies oil gas report?",
     answer:
       "A strong report is traceable to verified inputs, states assumptions clearly, uses appropriate standards and software, explains results, prioritizes risks and gives implementable recommendations.",
   },
   {
-    question: "IS SITE TESTING REQUIRED FOR AC INTERFERENCE STUDIES OIL GAS?",
+    question: "Is site testing required for AC interference studies oil gas?",
     answer:
       "It depends on the scope. Some studies are primarily model-based; others benefit from field measurements or inspections to validate inputs and existing conditions.",
   },
   {
-    question: "WHAT SOFTWARE MAY BE USED FOR AC INTERFERENCE STUDIES OIL GAS?",
+    question: "What software may be used for AC interference studies oil gas?",
     answer:
       "Depending on the study, engineering teams may use tools such as ETAP, DIgSILENT PowerFactory, PSS®E, PSCAD, EMTP-RV or CDEGS. The selected tool should match the technical objective.",
   },
   {
     question:
-      "HOW SHOULD AC INTERFERENCE STUDIES OIL GAS RECOMMENDATIONS BE PRIORITIZED?",
+      "How should AC interference studies oil gas recommendations be prioritized?",
     answer:
       "Prioritize personnel safety and statutory compliance first, followed by system stability, asset protection, operational continuity, maintainability and cost optimization.",
   },
   {
-    question: "CAN JEF SUPPORT RENEWABLE ENERGY AND BESS PROJECTS?",
+    question: "Can JEF support renewable energy and BESS projects?",
     answer:
       "Yes. JEF's power-system capabilities are relevant to solar PV, wind, BESS, hybrid systems, green hydrogen and microgrids, including grid-integration and dynamic studies.",
   },
   {
-    question: "CAN JEF SUPPORT OIL AND GAS FACILITIES?",
+    question: "Can JEF support oil and gas facilities?",
     answer:
       "Yes. Electrical reliability, grounding, lightning, power quality, EMI/EMC and interference risks are especially relevant to oil and gas and other process facilities.",
   },
   {
     question:
-      "WHAT IS THE FIRST STEP TO ENGAGE JEF FOR AC INTERFERENCE STUDIES OIL GAS?",
+      "What is the first step to engage JEF for AC interference studies oil gas?",
     answer:
       "Share the project location, objective, available drawings/data, required standards, expected deliverables and target schedule through the JEF UAE contact page.",
   },
   {
-    question: "HOW CAN AC INTERFERENCE STUDIES OIL GAS REDUCE PROJECT RISK?",
+    question: "How can AC interference studies oil gas reduce project risk?",
     answer:
       "Early analysis reveals design conflicts, compliance gaps and operating risks while there is still time to correct them with lower cost and less disruption.",
   },
   {
     question:
-      "SHOULD AC INTERFERENCE STUDIES OIL GAS BE UPDATED AFTER SYSTEM CHANGES?",
+      "Should AC interference studies oil gas be updated after system changes?",
     answer:
       "Yes. Material changes in network configuration, generation, loads, protection settings, grounding, building geometry or equipment can invalidate previous assumptions.",
   },
   {
     question:
-      "CAN AC INTERFERENCE STUDIES OIL GAS BE USED FOR COMPLIANCE EVIDENCE?",
+      "Can AC interference studies oil gas be used for compliance evidence?",
     answer:
       "A properly scoped study can support technical compliance documentation, but final statutory acceptance depends on the applicable authority, utility, client and project requirements.",
   },
   {
-    question: "WHAT GEOGRAPHIC KEYWORDS SHOULD THIS PAGE TARGET?",
+    question: "What geographic keywords should this page target?",
     answer:
       "Use natural combinations such as AC interference studies oil gas UAE, AC interference studies oil gas Abu Dhabi, AC interference studies oil gas Dubai, AC interference studies oil gas GCC and AC interference studies oil gas Middle East without keyword stuffing.",
   },
   {
     question:
-      "HOW SHOULD JEF DEMONSTRATE EXPERTISE FOR AC INTERFERENCE STUDIES OIL GAS?",
+      "How should JEF demonstrate expertise for AC interference studies oil gas?",
     answer:
       "Publish engineer-reviewed methodology, standards used, software capability, anonymized case studies, measurable project outcomes, author credentials and revision dates.",
   },
   {
     question:
-      "WHAT QUESTIONS DO PROCUREMENT TEAMS ASK ABOUT AC INTERFERENCE STUDIES OIL GAS?",
+      "What questions do procurement teams ask about AC interference studies oil gas?",
     answer:
       "Procurement teams typically ask about scope boundaries, deliverables, schedule, software, standards, site requirements, assumptions, exclusions, review cycles and commercial terms.",
   },
   {
     question:
-      "WHAT QUESTIONS DO ENGINEERING MANAGERS ASK ABOUT AC INTERFERENCE STUDIES OIL GAS?",
+      "What questions do engineering managers ask about AC interference studies oil gas?",
     answer:
       "Engineering managers focus on model accuracy, input validation, scenarios, acceptance criteria, sensitivity analysis, practical mitigation and how findings affect operations.",
   },
   {
     question:
-      "HOW CAN THIS PAGE WIN FEATURED SNIPPETS FOR AC INTERFERENCE STUDIES OIL GAS?",
+      "How can this page win featured snippets for AC interference studies oil gas?",
     answer:
       "Place a 40–60 word definition directly below the H1, use question-based H2s, concise lists and tables, and ensure the FAQ answers are self-contained and technically reviewed.",
   },
   {
     question:
-      "HOW CAN THIS PAGE PERFORM GLOBALLY FOR AC INTERFERENCE STUDIES OIL GAS?",
+      "How can this page perform globally for AC interference studies oil gas?",
     answer:
       "Use one authoritative English canonical page, add market-specific proof and terminology, implement hreflang only when localized versions exist, earn engineering-industry backlinks, and keep organization facts consistent across the site.",
   },
@@ -192,7 +192,7 @@ export default function ACInterferenceFAQ() {
         </Link>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-12 mb-6 tracking-wide">
+        <h1 className="mt-10 text-3xl md:text-5xl font-bold uppercase tracking-[2px]">
           FREQUENTLY ASKED QUESTIONS
         </h1>
 
@@ -208,12 +208,17 @@ export default function ACInterferenceFAQ() {
             const isOpen = openIndex === index;
 
             return (
-              <div key={index} className="border border-gray-600 self-start">
+              <div
+                key={index}
+                className="bg-[#202020] overflow-hidden border border-[#292929]"
+              >
                 <button
+                  type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between text-left px-4 py-6 hover:bg-[#303133] transition-colors"
+                  className="w-full min-h-[90px] px-6 py-5 flex items-center justify-between text-left hover:bg-[#252525] transition"
+                  aria-expanded={isOpen}
                 >
-                  <span className="text-sm md:text-base font-semibold pr-6">
+                  <span className="text-sm md:text-base text-gray-300 pr-4">
                     {faq.question}
                   </span>
 
@@ -225,8 +230,8 @@ export default function ACInterferenceFAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-gray-600 px-4 py-5">
-                    <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  <div className="border-t border-[#333] px-6 py-6">
+                    <p className="text-sm md:text-base leading-7 text-gray-400">
                       {faq.answer}
                     </p>
                   </div>

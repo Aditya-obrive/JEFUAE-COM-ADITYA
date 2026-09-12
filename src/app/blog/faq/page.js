@@ -201,11 +201,19 @@ export default function BlogFAQPage() {
       {/* Heading */}
       <section className="mx-auto w-[90%] max-w-7xl">
         <div className="mb-12">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-[3px] uppercase leading-tight">
+          <h1
+            className="
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+              font-bold
+              tracking-wide
+              uppercase
+              leading-tight
+            "
+          >
             BLOG FAQ
           </h1>
-
-          <div className="mt-6 w-20 h-1 bg-[#FF0000]"></div>
         </div>
 
         {/* FAQ Grid */}
@@ -216,28 +224,51 @@ export default function BlogFAQPage() {
             return (
               <div
                 key={index}
-                className="border border-gray-600 bg-[#292a2c] overflow-hidden"
+                className="
+                  bg-[#202020]
+                  overflow-hidden
+                  border
+                  border-[#292929]
+                  self-start
+                "
               >
                 {/* Question */}
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-6 text-left px-5 py-5 md:px-6 md:py-6 hover:bg-[#333436] transition-colors duration-300"
+                  className="
+                    w-full
+                    flex
+                    items-center
+                    justify-between
+                    gap-5
+                    text-left
+                    px-5
+                    py-6
+                  "
                 >
-                  <span className="text-base md:text-lg font-medium tracking-wide leading-relaxed">
+                  <span
+                    className="
+                      text-sm
+                      md:text-base
+                      text-gray-300
+                      pr-4
+                      leading-6
+                    "
+                  >
                     {faq.question}
                   </span>
 
-                  {/* Red Chevron */}
+                  {/* Red CSS Chevron */}
                   <span
                     className="
-                      shrink-0
                       w-2
                       h-2
                       border-r-2
                       border-b-2
-                      border-[#FF0000]
+                      border-[#ff0000]
+                      shrink-0
                       transition-transform
                       duration-300
                     "
@@ -248,21 +279,20 @@ export default function BlogFAQPage() {
                 </button>
 
                 {/* Answer */}
-                <div
-                  className={`grid transition-all duration-300 ease-in-out ${
-                    isOpen
-                      ? "grid-rows-[1fr] opacity-100"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="border-t border-gray-700 px-5 py-5 md:px-6 md:py-6">
-                      <p className="text-gray-300 text-sm md:text-base leading-7">
-                        {faq.answer}
-                      </p>
-                    </div>
+                {isOpen && (
+                  <div className="border-t border-[#292929] px-5 py-5">
+                    <p
+                      className="
+                        text-gray-300
+                        text-sm
+                        md:text-base
+                        leading-7
+                      "
+                    >
+                      {faq.answer}
+                    </p>
                   </div>
-                </div>
+                )}
               </div>
             );
           })}
@@ -272,7 +302,19 @@ export default function BlogFAQPage() {
         <div className="mt-12">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-3 text-[#FF0000] hover:text-white transition-colors duration-300 uppercase tracking-wider text-sm md:text-base"
+            className="
+              inline-flex
+              items-center
+              gap-3
+              text-[#FF0000]
+              hover:text-white
+              transition-colors
+              duration-300
+              uppercase
+              tracking-wider
+              text-sm
+              md:text-base
+            "
           >
             <span>←</span>
             <span>Back to Blog</span>

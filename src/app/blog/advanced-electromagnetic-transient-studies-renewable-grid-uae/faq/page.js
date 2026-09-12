@@ -63,29 +63,30 @@ const faqData = [
 ];
 
 export default function BlogFAQPage() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const handleClick = (index) => {
-    setOpenIndex(openIndex === index ? -1 : index);
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
     <main className="min-h-screen bg-[#292a2c] text-white pt-32 md:pt-40">
-      <div className="container mx-auto px-6 py-10 md:px-10">
+      <div className="max-w-[1100px] mx-auto px-6 md:px-8 pb-20">
         {/* Back to Blog */}
         <Link
           href="/blog/advanced-electromagnetic-transient-studies-renewable-grid-uae"
-          className="inline-block mb-12 text-[#FF0000] text-base md:text-lg hover:underline"
+          className="text-[#ff0000] text-sm uppercase tracking-wide hover:underline"
         >
           ← BACK TO BLOG
         </Link>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide uppercase mb-6">
+        <h1 className="mt-10 text-3xl md:text-5xl font-bold uppercase tracking-[2px]">
           FREQUENTLY ASKED QUESTIONS
         </h1>
 
-        <p className="text-gray-300 text-lg md:text-xl leading-8 max-w-4xl mb-12">
+        {/* Description */}
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-4xl mb-10">
           Frequently asked questions about electromagnetic transient studies,
           renewable energy grid integration, technical requirements,
           deliverables and project applications.
@@ -99,27 +100,31 @@ export default function BlogFAQPage() {
             return (
               <div
                 key={index}
-                className="border border-gray-600 bg-[#292a2c] self-start"
+                className="bg-[#202020] overflow-hidden border border-[#292929]"
               >
                 {/* Question */}
                 <button
                   type="button"
                   onClick={() => handleClick(index)}
-                  className="w-full flex items-center justify-between gap-6 px-6 py-6 text-left"
+                  className="w-full min-h-[90px] px-6 py-5 flex items-center justify-between text-left hover:bg-[#252525] transition"
+                  aria-expanded={isOpen}
                 >
-                  <span className="text-base md:text-lg font-semibold uppercase">
+                  <span className="text-sm md:text-base text-gray-300 pr-4">
                     {faq.question}
                   </span>
 
-                  <span className="text-[#FF0000] text-2xl flex-shrink-0">
-                    {isOpen ? "⌃" : "⌄"}
-                  </span>
+                  {/* Red CSS Chevron */}
+                  <span
+                    className={`w-2 h-2 border-r-2 border-b-2 border-[#ff0000] shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-[-135deg]" : "rotate-45"
+                    }`}
+                  ></span>
                 </button>
 
                 {/* Answer */}
                 {isOpen && (
-                  <div className="border-t border-gray-700 px-6 py-6">
-                    <p className="text-gray-300 text-base md:text-lg leading-8">
+                  <div className="border-t border-[#333] px-6 py-6">
+                    <p className="text-sm md:text-base leading-7 text-gray-400">
                       {faq.answer}
                     </p>
                   </div>
@@ -127,16 +132,6 @@ export default function BlogFAQPage() {
               </div>
             );
           })}
-        </div>
-
-        {/* Back to Blog */}
-        <div className="mt-14">
-          <Link
-            href="/blog/advanced-electromagnetic-transient-studies-renewable-grid-uae"
-            className="text-[#FF0000] hover:underline text-lg"
-          >
-            ← BACK TO BLOG
-          </Link>
         </div>
       </div>
     </main>

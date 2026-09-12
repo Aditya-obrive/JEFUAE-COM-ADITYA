@@ -5,152 +5,152 @@ import Link from "next/link";
 
 const faqs = [
   {
-    question: "WHAT ARE COMPREHENSIVE EARTHING AUDITS?",
+    question: "What are comprehensive earthing audits?",
     answer:
       "Comprehensive earthing audits are engineering assessments used to evaluate the condition, performance, safety and reliability of an electrical earthing and grounding system.",
   },
   {
-    question: "WHY ARE COMPREHENSIVE EARTHING AUDITS IMPORTANT?",
+    question: "Why are comprehensive earthing audits important?",
     answer:
       "Earthing audits help identify grounding deficiencies, unsafe conditions, equipment risks and compliance gaps before they result in electrical hazards, equipment damage or operational problems.",
   },
   {
-    question: "WHAT IS CHECKED DURING AN EARTHING AUDIT?",
+    question: "What is checked during an earthing audit?",
     answer:
       "An earthing audit can include grounding conductors, earth electrodes, connections, equipment grounding, bonding, earth resistance, continuity, potential differences and other project-specific requirements.",
   },
   {
-    question: "WHEN SHOULD AN EARTHING AUDIT BE PERFORMED?",
+    question: "When should an earthing audit be performed?",
     answer:
       "Earthing audits can be performed for new projects, existing facilities, plant expansions, periodic maintenance programs, troubleshooting activities and when significant electrical-system changes are introduced.",
   },
   {
-    question: "WHO PROVIDES EARTHING AUDITS IN THE UAE?",
+    question: "Who provides earthing audits in the UAE?",
     answer:
       "Specialist electrical engineering consultants with experience in grounding systems, electrical safety, testing and technical assessment can provide earthing audit services in the UAE.",
   },
   {
-    question: "DOES JEF PROVIDE EARTHING AUDIT SERVICES IN THE UAE?",
+    question: "Does JEF provide earthing audit services in the UAE?",
     answer:
       "JEF UAE provides electrical engineering and technical assessment services covering earthing and grounding systems for industrial, utility, infrastructure and other electrical facilities.",
   },
   {
-    question: "WHICH INDUSTRIES REQUIRE EARTHING AUDITS?",
+    question: "Which industries require earthing audits?",
     answer:
       "Earthing audits are relevant to oil and gas facilities, power utilities, industrial plants, renewable energy projects, infrastructure facilities, commercial facilities and other electrical installations.",
   },
   {
-    question: "WHAT INFORMATION IS REQUIRED FOR AN EARTHING AUDIT?",
+    question: "What information is required for an earthing audit?",
     answer:
       "Typical information includes electrical drawings, grounding layouts, equipment details, previous test reports, site information, operating conditions and applicable client or authority requirements.",
   },
   {
-    question: "IS FIELD TESTING REQUIRED FOR AN EARTHING AUDIT?",
+    question: "Is field testing required for an earthing audit?",
     answer:
       "Field testing may be required depending on the audit scope. Measurements can be used to verify existing conditions and validate information used in the engineering assessment.",
   },
   {
-    question: "WHAT EARTH RESISTANCE VALUE IS REQUIRED?",
+    question: "What earth resistance value is required?",
     answer:
       "The acceptable earth resistance depends on the installation, applicable standards, system design, utility requirements and project-specific criteria. The target value should therefore be established for the specific facility.",
   },
   {
-    question: "WHAT STANDARDS APPLY TO EARTHING AUDITS?",
+    question: "What standards apply to earthing audits?",
     answer:
       "The applicable standards depend on the project and installation. Relevant IEC, IEEE, BS and local utility or authority requirements may apply depending on the scope.",
   },
   {
-    question: "CAN EARTHING AUDITS BE PERFORMED ON EXISTING FACILITIES?",
+    question: "Can earthing audits be performed on existing facilities?",
     answer:
       "Yes. Existing facilities can be assessed using available documentation, site inspections, field measurements and engineering analysis.",
   },
   {
-    question: "CAN EARTHING AUDITS IDENTIFY SAFETY RISKS?",
+    question: "Can earthing audits identify safety risks?",
     answer:
       "Yes. An audit can identify grounding deficiencies and other conditions that may affect electrical safety, equipment protection and reliable system operation.",
   },
   {
-    question: "CAN EARTHING AUDITS HELP WITH COMPLIANCE?",
+    question: "Can earthing audits help with compliance?",
     answer:
       "Yes. The findings from an appropriately scoped audit can support compliance assessment against applicable engineering standards, client requirements and authority criteria.",
   },
   {
-    question: "WHAT ARE THE TYPICAL DELIVERABLES OF AN EARTHING AUDIT?",
+    question: "What are the typical deliverables of an earthing audit?",
     answer:
       "Typical deliverables include the audit methodology, input information, field observations, test results where applicable, identified deficiencies, risk assessment, recommendations and a final technical report.",
   },
   {
-    question: "HOW LONG DOES AN EARTHING AUDIT TAKE?",
+    question: "How long does an earthing audit take?",
     answer:
       "The duration depends on facility size, system complexity, number of locations or assets, availability of information, site access and the required testing and reporting scope.",
   },
   {
-    question: "HOW MUCH DOES AN EARTHING AUDIT COST IN THE UAE?",
+    question: "How much does an earthing audit cost in the UAE?",
     answer:
       "The cost depends on the facility size, audit scope, number of assets, field testing requirements, engineering analysis and reporting requirements. A project-specific quotation is normally required.",
   },
   {
-    question: "CAN JEF REVIEW AN EXISTING EARTHING AUDIT REPORT?",
+    question: "Can JEF review an existing earthing audit report?",
     answer:
       "Yes. An existing report can be technically reviewed to assess its assumptions, measurements, methodology, findings, recommendations and alignment with the applicable requirements.",
   },
   {
-    question: "CAN EARTHING AUDITS BE PERFORMED FOR OIL AND GAS FACILITIES?",
+    question: "Can earthing audits be performed for oil and gas facilities?",
     answer:
       "Yes. Earthing performance is particularly important in oil and gas and process facilities because electrical safety, equipment protection and reliable operation are critical.",
   },
   {
-    question: "CAN EARTHING AUDITS BE PERFORMED FOR POWER UTILITIES?",
+    question: "Can earthing audits be performed for power utilities?",
     answer:
       "Yes. Utility installations can require detailed grounding assessments covering substations, equipment, grounding networks and other electrical infrastructure.",
   },
   {
-    question: "CAN EARTHING AUDITS SUPPORT RENEWABLE ENERGY PROJECTS?",
+    question: "Can earthing audits support renewable energy projects?",
     answer:
       "Yes. Solar PV, wind, battery storage and other renewable energy facilities can require grounding assessment as part of electrical safety and system design verification.",
   },
   {
-    question: "WHAT PROBLEMS CAN A POOR EARTHING SYSTEM CAUSE?",
+    question: "What problems can a poor earthing system cause?",
     answer:
       "Poor earthing can contribute to unsafe touch or step potentials, ineffective fault-current paths, equipment damage, protection problems, electromagnetic interference and increased electrical safety risks.",
   },
   {
-    question: "WHY IS EARTHING IMPORTANT FOR ELECTRICAL EQUIPMENT?",
+    question: "Why is earthing important for electrical equipment?",
     answer:
       "An effective grounding system provides appropriate fault-current paths and supports personnel safety, equipment protection and reliable operation of electrical systems.",
   },
   {
-    question: "CAN EARTHING AUDITS IDENTIFY CORROSION OR DAMAGED CONNECTIONS?",
+    question: "Can earthing audits identify corrosion or damaged connections?",
     answer:
       "Depending on the audit scope, inspections and testing can identify visible deterioration, damaged connections, continuity issues and other conditions that may reduce grounding-system performance.",
   },
   {
-    question: "SHOULD EARTHING AUDITS BE REPEATED PERIODICALLY?",
+    question: "Should earthing audits be repeated periodically?",
     answer:
       "Periodic assessment can be useful because grounding systems can change due to corrosion, construction work, equipment modifications, environmental conditions and other changes to the facility.",
   },
   {
-    question: "WHAT SOFTWARE CAN BE USED FOR EARTHING STUDIES?",
+    question: "What software can be used for earthing studies?",
     answer:
       "The software used depends on the technical objective and study scope. Engineering tools may be selected for grounding analysis, electrical-system modelling and specialized earthing calculations.",
   },
   {
-    question: "HOW CAN JEF DEMONSTRATE EXPERTISE IN EARTHING AUDITS?",
+    question: "How can JEF demonstrate expertise in earthing audits?",
     answer:
       "Expertise can be demonstrated through relevant engineering experience, documented methodology, appropriate testing capabilities, applicable standards knowledge, technical reporting and project-specific recommendations.",
   },
   {
-    question: "WHAT IS THE FIRST STEP TO START AN EARTHING AUDIT?",
+    question: "What is the first step to start an earthing audit?",
     answer:
       "The first step is to define the facility, audit objective, available documentation, required testing, applicable standards and expected deliverables so the appropriate audit scope can be established.",
   },
   {
-    question: "CAN EARTHING AUDITS REDUCE ELECTRICAL PROJECT RISK?",
+    question: "Can earthing audits reduce electrical project risk?",
     answer:
       "Yes. Identifying grounding deficiencies early allows corrective measures to be planned before they develop into more serious safety, reliability or equipment-protection issues.",
   },
   {
-    question: "WHY CHOOSE JEF FOR EARTHING AUDITS IN THE UAE?",
+    question: "Why choose JEF for earthing audits in the UAE?",
     answer:
       "JEF UAE provides electrical engineering expertise for grounding and earthing assessments, with project-specific analysis, technical recommendations and engineering documentation for industrial and infrastructure applications.",
   },
@@ -175,7 +175,7 @@ export default function EarthingAuditsFAQ() {
         </Link>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-12 mb-6 tracking-wide">
+        <h1 className="mt-10 text-3xl md:text-5xl font-bold uppercase tracking-[2px]">
           FREQUENTLY ASKED QUESTIONS
         </h1>
 
@@ -192,12 +192,17 @@ export default function EarthingAuditsFAQ() {
             const isOpen = openIndex === index;
 
             return (
-              <div key={index} className="border border-gray-600 self-start">
+              <div
+                key={index}
+                className="bg-[#202020] overflow-hidden border border-[#292929]"
+              >
                 <button
+                  type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between text-left px-4 py-6 hover:bg-[#303133] transition-colors"
+                  className="w-full min-h-[90px] px-6 py-5 flex items-center justify-between text-left hover:bg-[#252525] transition"
+                  aria-expanded={isOpen}
                 >
-                  <span className="text-sm md:text-base font-semibold pr-6">
+                  <span className="text-sm md:text-base text-gray-300 pr-4">
                     {faq.question}
                   </span>
 
@@ -209,8 +214,8 @@ export default function EarthingAuditsFAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-gray-600 px-4 py-5">
-                    <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  <div className="border-t border-[#333] px-6 py-6">
+                    <p className="text-sm md:text-base leading-7 text-gray-400">
                       {faq.answer}
                     </p>
                   </div>

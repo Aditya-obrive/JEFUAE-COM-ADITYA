@@ -178,7 +178,7 @@ export default function BlogFAQPage() {
           ← BACK TO BLOG
         </Link>
 
-        <h1 className="mt-10 text-4xl md:text-6xl font-bold uppercase tracking-wide">
+        <h1 className="mt-10 text-3xl md:text-5xl font-bold uppercase tracking-[2px]">
           FREQUENTLY ASKED QUESTIONS
         </h1>
 
@@ -195,7 +195,7 @@ export default function BlogFAQPage() {
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-600 bg-[#292a2c] self-start"
+              className="bg-[#202020] overflow-hidden border border-[#292929]"
             >
               {/* Question */}
               <button
@@ -204,9 +204,9 @@ export default function BlogFAQPage() {
                 className="w-full flex items-center justify-between gap-5 text-left px-5 py-6"
                 aria-expanded={openIndex === index}
               >
-                <h2 className="text-base md:text-lg font-semibold uppercase tracking-wide">
+                <span className="text-sm md:text-base text-gray-300 pr-4">
                   {faq.question}
-                </h2>
+                </span>
 
                 <span
                   className={`w-2 h-2 border-r-2 border-b-2 border-[#ff0000] shrink-0 transition-transform duration-300 ${
@@ -217,8 +217,10 @@ export default function BlogFAQPage() {
 
               {/* Answer */}
               {openIndex === index && (
-                <div className="px-5 pb-6 text-gray-300 leading-7">
-                  {faq.answer}
+                <div className="border-t border-[#333] px-6 py-6">
+                  <p className="text-sm md:text-base leading-7 text-gray-400">
+                    {faq.answer}
+                  </p>
                 </div>
               )}
             </div>
