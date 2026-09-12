@@ -152,6 +152,8 @@ const Navbar = () => {
                                 <div
                                     key={index}
                                     className="lg:flex cursor-pointer hidden gap-2 justify-center items-center self-stretch my-auto group" // Added 'group' here
+                                    onMouseEnter={item.hasDropdown ? () => handleMenuHover(item.label) : undefined}
+                                    onMouseLeave={item.hasDropdown ? handleMouseLeave : undefined}
                                 >
                                     {item.path ? (
                                         <Link
@@ -163,8 +165,6 @@ const Navbar = () => {
                                         </Link>
                                     ) : (
                                         <button
-                                            onMouseEnter={() => handleMenuHover(item.label)}
-                                            onMouseLeave={handleMouseLeave}
                                             className="nav-item cursor-pointer uppercase md:text-xs xl:text-sm font-medium text-white tracking-[2px]"
                                         >
                                             {item.label}
@@ -173,8 +173,6 @@ const Navbar = () => {
                                     {item.hasDropdown && (
                                         <div className="flex cursor-pointer flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                                             <img
-                                                onMouseEnter={() => handleMenuHover(item.label)}
-                                                onMouseLeave={handleMouseLeave}
                                                 loading="lazy"
                                                 src="/HomePageImg/Dropdown.png"
                                                 alt="Dropdown"
