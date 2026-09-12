@@ -18,13 +18,11 @@ const Navbar = () => {
     const [isDropdownVisible, setIsDropdownVisible] = useState(false)
     const [activeSection, setActiveSection] = useState('')
     const [isSlideOpen, setIsSlideOpen] = useState(false)
-    const resetTimeout = useRef(null)
+    const [resetTimeout, setResetTimeout] = useState(null)
     const [scrollNav, setScrollNav] = useState(false)
     const [hoverLine, setHoverLine] = useState('')
 
     const pathname = usePathname()
-    const isFaqPage = pathname?.endsWith('/faq')
-
     const toggleDropdown = () => setIsDropdownVisible(prev => !prev)
     const toggleSlideMenu = () => setIsSlideOpen(prev => !prev)
 
@@ -41,9 +39,9 @@ const Navbar = () => {
     }, [isDropdownVisible]);
 
     const handleMenuHover = label => {
-        if (resetTimeout.current) {
-            clearTimeout(resetTimeout.current)
-            resetTimeout.current = null
+        if (resetTimeout) {
+            clearTimeout(resetTimeout)
+            setResetTimeout(null)
         }
 
         if (label === 'Home' || label === 'Careers') {
@@ -54,9 +52,10 @@ const Navbar = () => {
     }
 
     const handleMouseLeave = () => {
-        resetTimeout.current = setTimeout(() => {
+        const timeout = setTimeout(() => {
             setActiveSection('')
         }, 200)
+        setResetTimeout(timeout)
     }
 
     useEffect(() => {
@@ -68,9 +67,9 @@ const Navbar = () => {
 
         return () => {
             document.body.style.overflow = ''
-            if (resetTimeout.current) clearTimeout(resetTimeout.current)
+            if (resetTimeout) clearTimeout(resetTimeout)
         }
-    }, [activeSection, isSlideOpen])
+    }, [activeSection, isSlideOpen, resetTimeout])
 
     useEffect(() => {
         const handleScroll = () => {
