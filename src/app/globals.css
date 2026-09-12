@@ -140,6 +140,7 @@ button{
 /* FAQ header structure from the reference: tall centered masthead above the breadcrumb bar. */
 .faq-page-navbar {
   height: 193px;
+  overflow: visible !important;
 }
 .faq-page-navbar > div {
   justify-content: center;
