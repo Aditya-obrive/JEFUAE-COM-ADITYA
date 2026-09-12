@@ -258,8 +258,8 @@ button{
   border: 0;
   color: #c8d4df;
   display: flex;
-  font-family: var(--font-montserrat), sans-serif;
-  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0;
@@ -285,8 +285,8 @@ button{
 .renewable-faq-answer { border-top: 1px solid #333435; }
 .renewable-faq-answer p {
   color: #9fb8d2;
-  font-family: var(--font-montserrat), sans-serif;
-  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.75;
