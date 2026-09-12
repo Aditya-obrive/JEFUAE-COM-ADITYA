@@ -220,6 +220,11 @@ button{
 
 .renewable-faq-breadcrumb a:hover { color: #fff; }
 .renewable-faq-breadcrumb .current { color: #ff0000; }
+.renewable-faq-breadcrumb .breadcrumb-segment {
+  align-items: center;
+  display: inline-flex;
+  gap: 15px;
+}
 
 .renewable-faq-content {
   margin: 0 auto;

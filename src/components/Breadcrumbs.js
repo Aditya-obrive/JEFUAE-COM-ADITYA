@@ -1,0 +1,49 @@
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const specialLabels = {
+  faq: 'FAQs',
+  faqs: 'FAQs',
+  'l&d-centre': 'L&D Centre',
+  'smartdigitalization': 'Smart Digitalization',
+};
+
+function formatSegment(segment) {
+  const decoded = decodeURIComponent(segment).replace(/([a-z])([A-Z])/g, '$1 $2');
+  const normalized = decoded.replace(/[-_]+/g, ' ').trim();
+  const specialLabel = specialLabels[normalized.toLowerCase()];
+
+  if (specialLabel) return specialLabel;
+
+  return normalized
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1).toLowerCase()}`)
+    .join(' ');
+}
+
+export default function Breadcrumbs() {
+  const pathname = usePathname() || '/';
+  const segments = pathname.split('/').filter(Boolean);
+
+  return (
+    <nav className="renewable-faq-breadcrumb" aria-label="Breadcrumb">
+      <Link href="/">HOME</Link>
+      {segments.map((segment, index) => {
+        const href = `/${segments.slice(0, index + 1).join('/')}`;
+        const isCurrent = index === segments.length - 1;
+
+        return (
+          <span className="breadcrumb-segment" key={href}>
+            <span aria-hidden="true">›</span>
+            <Link className={isCurrent ? 'current' : ''} href={href}>
+              {formatSegment(segment)}
+            </Link>
+          </span>
+        );
+      })}
+    </nav>
+  );
+}

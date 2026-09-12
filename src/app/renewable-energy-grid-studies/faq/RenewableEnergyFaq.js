@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { renewableEnergyFaqs as faqs } from '@/data/renewableEnergyFaqs';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 /* FAQ content lives in a plain data module so the global footer can reuse it safely. */
 /*
@@ -68,7 +69,7 @@ export default function RenewableEnergyFaq({
   backPath = '/industries/renewableenergy',
   videoSource = '/IndustriesPage/REI.mp4',
   poster = '/IndustriesPage/IndustriesMainImg.png',
-  showParentBreadcrumb = true,
+  showParentBreadcrumb = false,
 }) {
   const [openIndex, setOpenIndex] = useState(-1);
   const schema = {
@@ -85,12 +86,7 @@ export default function RenewableEnergyFaq({
   return (
     <main className="renewable-faq-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <nav className="renewable-faq-breadcrumb" aria-label="Breadcrumb">
-        <Link href="/">HOME</Link>
-        {showParentBreadcrumb && <><span>›</span><Link href={breadcrumbPath}>{breadcrumbLabel}</Link></>}
-        <span>›</span>
-        <span className="current">FAQ</span>
-      </nav>
+      <Breadcrumbs />
 
       <section className="renewable-faq-content">
         <div className="renewable-faq-heading">
