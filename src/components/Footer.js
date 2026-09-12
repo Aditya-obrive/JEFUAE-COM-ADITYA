@@ -95,15 +95,15 @@ const MainFooter = () => {
     const faqPath = faqPathByPage[normalizedPathname];
     const internalLinks = [
         {
-            name: 'FAQ',
+            name: 'FAQs',
             path: faqPath || '/html-sitemap',
         },
     ];
 
 
     return (
-        <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
-            <div className="flex flex-col lg:flex-row w-[88vw] max-w-[95vw] gap-8 lg:gap-0 tracking-wider justify-between">
+        <main className="main-footer flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
+            <div className="footer-nav flex flex-col lg:flex-row w-[88vw] max-w-[95vw] gap-8 lg:gap-0 tracking-wider justify-between">
                 <Section title="About" items={itemsAbout} />
                 <Section title="Our Business" items={itemsService} />
                 <Section title="Locations" items={itemsLocation} />
@@ -121,20 +121,20 @@ const MainFooter = () => {
 function Footer() {
 
     return (
-        <footer className="card-slider-footer flex flex-col items-center pt-10 bg-stone-800">
+        <footer className="site-footer card-slider-footer flex flex-col items-center pt-10 bg-stone-800">
             <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
-            <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
+            <div className="footer-social-row flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
                 <div className="hidden  card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
                     FOLLOW jef ON SOCIAL MEDIA
                 </div>
-                <div className="flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">
-                    <Link href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></Link>
-                    <Link href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Facebook.png" alt="FacebookImg" /></Link>
-                    <Link href="https://www.linkedin.com/showcase/jef-engineering-services-middle-east/" target="_blank" className="object-contain  card-slider-footer"><img src="../FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></Link>
-                    <Link href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Twitter.png" alt="TwitterImg" /></Link>
+                <div className="footer-social-links flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">
+                    <Link href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="/FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></Link>
+                    <Link href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="/FooterLogo/Link - Facebook.png" alt="FacebookImg" /></Link>
+                    <Link href="https://www.linkedin.com/showcase/jef-engineering-services-middle-east/" target="_blank" className="object-contain card-slider-footer"><img src="/FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></Link>
+                    <Link href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="/FooterLogo/Link - Twitter.png" alt="TwitterImg" /></Link>
                 </div>
             </div>
-            <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
+            <div className="footer-legal flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900 max-md:max-w-full">
                 <div className="flex X-axis-card-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
                     <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-[10px] sm:text-xs font-light basis-auto grow-0 tracking-widest">
                         <Link href="/privacypolicy" >Privacy Policy</Link>
@@ -161,11 +161,11 @@ function Section({ title, items }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section className="flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px] max-md:w-full max-md:min-h-0">
-            <header className="w-full text-xl font-bold tracking-widest text-[#FF0000] uppercase whitespace-nowrap">
+        <section className="footer-section flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px] max-md:w-full max-md:min-h-0">
+            <header className="footer-section-header w-full text-xl font-bold tracking-widest text-[#FF0000] uppercase whitespace-nowrap">
                 <button
                     type="button"
-                    className="flex items-center justify-between w-full text-left lg:pointer-events-none"
+                    className="footer-section-toggle flex items-center justify-between w-full text-left lg:pointer-events-none"
                     onClick={() => setIsOpen((open) => !open)}
                     aria-expanded={isOpen}
                 >
