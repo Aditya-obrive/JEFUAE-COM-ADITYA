@@ -15,7 +15,7 @@ export const metadata = {
     "power quality analysis blog",
     "EMI EMC engineering articles UAE",
     "electrical safety knowledge UAE",
-    "JEF UAE blog"
+    "JEF UAE blog",
   ],
 
   alternates: {
@@ -30,11 +30,37 @@ export const metadata = {
   openGraph: {
     title:
       "Electrical Engineering Blog in UAE | Power System, Earthing & Safety Insights | JEF UAE",
+
     description:
       "Technical articles on power system studies, grounding, lightning protection, power quality and electrical safety across UAE industries.",
+
     url: "https://www.jefuae.com/blog",
+
     siteName: "JEF UAE",
+
     type: "website",
+
+    locale: "en_AE",
+
+    images: [
+      {
+        url: "https://www.jefuae.com/BlogImg/BlogsBanner.png",
+        width: 1920,
+        height: 1080,
+        alt: "JEF UAE Electrical Engineering Blog",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Electrical Engineering Blog in UAE | JEF UAE",
+
+    description:
+      "Expert insights on power system studies, earthing, lightning protection, EMI/EMC, power quality and electrical safety in UAE.",
+
+    images: ["https://www.jefuae.com/BlogImg/BlogsBanner.png"],
   },
 
   other: {
@@ -48,7 +74,7 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <div className="container mx-auto py-20">
-     <Blog/>
+      <Blog />
     </div>
   );
 }

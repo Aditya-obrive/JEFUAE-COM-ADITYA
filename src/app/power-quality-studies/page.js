@@ -1,4 +1,4 @@
-import PQS from "./pqs"
+import PQS from "./pqs";
 
 export const metadata = {
   title:
@@ -16,7 +16,7 @@ export const metadata = {
     "power factor correction study UAE",
     "grid compliance study UAE",
     "industrial power quality consultants UAE",
-    "JEF UAE"
+    "JEF UAE",
   ],
 
   alternates: {
@@ -31,9 +31,12 @@ export const metadata = {
   openGraph: {
     title:
       "Power Quality Studies in UAE | Harmonic Analysis & Voltage Stability | JEF UAE",
+
     description:
       "Advanced harmonic analysis, voltage stability assessment, transient monitoring and power factor correction studies ensuring IEC/IEEE compliance for industrial and utility facilities across UAE.",
+
     url: "https://www.jefuae.com/power-quality-studies",
+
     siteName: "JEF UAE",
   },
 
@@ -41,14 +44,14 @@ export const metadata = {
     "geo.region": "AE-AZ",
     "geo.placename": "Abu Dhabi, UAE",
     "geo.position": "24.4539;54.3773",
-    "ICBM": "24.4539, 54.3773",
+    ICBM: "24.4539, 54.3773",
   },
 };
 
 export default function PQSPage() {
-    return (
-        <>
-            <PQS />
-        </>
-    )
+  return (
+    <>
+      <PQS />
+    </>
+  );
 }
