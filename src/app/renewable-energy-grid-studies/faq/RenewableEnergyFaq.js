@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { renewableEnergyFaqs as faqs } from '@/data/renewableEnergyFaqs';
-import Breadcrumbs from '@/components/Breadcrumbs';
 
 /* FAQ content lives in a plain data module so the global footer can reuse it safely. */
 /*
@@ -86,8 +85,6 @@ export default function RenewableEnergyFaq({
   return (
     <main className="renewable-faq-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <Breadcrumbs />
-
       <section className="renewable-faq-content">
         <div className="renewable-faq-heading">
           <h2>{displayTitle}</h2>

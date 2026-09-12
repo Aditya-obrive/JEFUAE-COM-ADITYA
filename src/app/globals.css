@@ -134,7 +134,7 @@ button{
   color: #f8f8f8;
   font-family: var(--font-montserrat), sans-serif;
   min-height: 100vh;
-  padding-top: 160px;
+  padding-top: 0;
 }
 
 /* Keep FAQ dropdown panels visible without changing the original navbar size. */
@@ -209,6 +209,7 @@ button{
   letter-spacing: 2px;
   min-height: 64px;
   padding: 0 max(24px, calc((100% - 1332px) / 2));
+  margin-top: 150px;
 }
 
 .renewable-faq-breadcrumb a:hover { color: #fff; }
@@ -217,6 +218,13 @@ button{
   align-items: center;
   display: inline-flex;
   gap: 15px;
+}
+.renewable-faq-breadcrumb .breadcrumb-segment > span[aria-hidden="true"] {
+  font-size: 0;
+}
+.renewable-faq-breadcrumb .breadcrumb-segment > span[aria-hidden="true"]::before {
+  content: '›';
+  font-size: 13px;
 }
 
 .renewable-faq-content {
@@ -309,7 +317,8 @@ button{
 .renewable-faq-back:hover { background: #fff; color: #1f2021; }
 
 @media (max-width: 900px) {
-  .renewable-faq-page { padding-top: 100px; }
+  .renewable-faq-page { padding-top: 0; }
+  .renewable-faq-breadcrumb { margin-top: 100px; }
   .renewable-faq-hero { min-height: 480px; }
   .renewable-faq-hero-content { width: calc(100% - 48px); padding-bottom: 42px; }
   .renewable-faq-content { padding: 65px 24px 90px; }
@@ -320,7 +329,7 @@ button{
 @media (max-width: 520px) {
   .renewable-faq-hero { min-height: 420px; }
   .renewable-faq-hero h1 { font-size: 2rem; }
-  .renewable-faq-breadcrumb { font-size: 10px; gap: 8px; min-height: 56px; }
+  .renewable-faq-breadcrumb { font-size: 10px; gap: 8px; min-height: 56px; margin-top: 100px; }
   .renewable-faq-item button { min-height: 96px; padding: 23px 20px; }
   .renewable-faq-answer p { padding: 22px 20px 24px; }
 }

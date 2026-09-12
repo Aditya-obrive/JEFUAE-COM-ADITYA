@@ -2,6 +2,7 @@ import { Montserrat } from 'next/font/google'
 import "./globals.css";
 import { TranslationProvider } from '@/context/TranslationContext';
 import Navbar from '@/components/Navbar';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import MainFooter from '@/components/Footer';
 import Script from 'next/script';
 
@@ -153,6 +154,7 @@ export default function RootLayout({ children }) {
         <TranslationProvider>
           <div id="google_translate_element" style={{ display: "none" }}></div>
           <Navbar />
+          <Breadcrumbs />
           {children}
           <MainFooter />
         </TranslationProvider>

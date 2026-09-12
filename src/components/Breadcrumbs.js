@@ -16,7 +16,7 @@ const specialLabels = {
   'smartdigitalization': 'Smart Digitalization',
 };
 
-const mainNavigationSlugs = new Set(['about-us', 'industries', 'our-business', 'business', 'blog', 'blogs']);
+const mainNavigationSlugs = new Set(['about-us', 'about', 'industries', 'our-business', 'business', 'blog', 'blogs']);
 
 function formatSegment(segment) {
   const decoded = decodeURIComponent(segment).replace(/([a-z])([A-Z])/g, '$1 $2');
@@ -35,6 +35,8 @@ function formatSegment(segment) {
 export default function Breadcrumbs() {
   const pathname = usePathname() || '/';
   const segments = pathname.split('/').filter(Boolean);
+
+  if (!segments.length) return null;
   const breadcrumbSegments = pathname.toLowerCase() === '/home/faqs'
     ? [{ segment: 'faqs', href: '/home/faqs' }]
     : segments
