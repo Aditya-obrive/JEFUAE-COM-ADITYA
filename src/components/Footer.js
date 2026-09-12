@@ -86,6 +86,7 @@ const MainFooter = () => {
         '/industries/processplant': '/process-plant-electrical-studies/faq',
         '/process-plant-electrical-studies/faq': '/process-plant-electrical-studies/faq',
         '/industries/commercialbuilding': '/commercial-building-electrical-safety/faq',
+        '/lightning-protection-studies': '/lightning-protection-studies/faq',
         '/commercial-building-electrical-safety/faq': '/commercial-building-electrical-safety/faq',
     };
 
