@@ -26,6 +26,9 @@ const Navbar = () => {
     const isFaqPage = pathname?.endsWith('/faq')
     const toggleDropdown = () => setIsDropdownVisible(prev => !prev)
     const toggleSlideMenu = () => setIsSlideOpen(prev => !prev)
+    const toggleFaqSection = label => {
+        setActiveSection(current => current === label ? '' : label)
+    }
 
     useEffect(() => {
         if (isDropdownVisible) {
@@ -164,8 +167,9 @@ const Navbar = () => {
                                         </Link>
                                     ) : (
                                         <button
-                                            onMouseEnter={() => handleMenuHover(item.label)}
-                                            onMouseLeave={handleMouseLeave}
+                                            onClick={isFaqPage ? () => toggleFaqSection(item.label) : undefined}
+                                            onMouseEnter={isFaqPage ? undefined : () => handleMenuHover(item.label)}
+                                            onMouseLeave={isFaqPage ? undefined : handleMouseLeave}
                                             className="nav-item cursor-pointer uppercase md:text-xs xl:text-sm font-medium text-white tracking-[2px]"
                                         >
                                             {item.label}
@@ -174,8 +178,8 @@ const Navbar = () => {
                                     {item.hasDropdown && (
                                         <div className="flex cursor-pointer flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                                             <img
-                                                onMouseEnter={() => handleMenuHover(item.label)}
-                                                onMouseLeave={handleMouseLeave}
+                                                onMouseEnter={isFaqPage ? undefined : () => handleMenuHover(item.label)}
+                                                onMouseLeave={isFaqPage ? undefined : handleMouseLeave}
                                                 loading="lazy"
                                                 src="/HomePageImg/Dropdown.png"
                                                 alt="Dropdown"
