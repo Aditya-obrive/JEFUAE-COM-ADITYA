@@ -16,6 +16,7 @@ const MainFooter = () => {
    * FAQ LINKS FOR OUR BUSINESS SERVICES
    * =========================================================
    */
+
   const faqLinks = {
     "/earthing-studies": "/earthing-studies/faq",
 
@@ -35,14 +36,14 @@ const MainFooter = () => {
 
   /*
    * =========================================================
-   * FAQ LINKS FOR ALL 9 BLOG PAGES
+   * FAQ LINKS FOR BLOG PAGES
    * =========================================================
    */
+
   const blogFaqLinks = {
     // Main Blog Page
-    "/blog": 
-    "/blog/faq",
-    
+    "/blog": "/blog/faq",
+
     // 1. Power System Studies for Renewable Energy
     "/blog/power-system-studies-renewable-energy-integration-uae-middle-east":
       "/blog/power-system-studies-renewable-energy-integration-uae-middle-east/faq",
@@ -87,23 +88,18 @@ const MainFooter = () => {
    *
    * Example:
    *
-   * /blog/example
-   *
+   * /earthing-studies
    * becomes:
+   * /earthing-studies
    *
-   * /blog/example
-   *
-   * And:
-   *
-   * /blog/example/faq
-   *
+   * /earthing-studies/faq
    * becomes:
+   * /earthing-studies
    *
-   * /blog/example
-   *
-   * This allows the footer to work on BOTH
-   * the blog page and its FAQ page.
+   * This allows the footer FAQ link to work on
+   * both the service page and its FAQ page.
    */
+
   const servicePath = pathname?.endsWith("/faq")
     ? pathname.replace(/\/faq$/, "")
     : pathname;
@@ -112,11 +108,8 @@ const MainFooter = () => {
    * =========================================================
    * FIND FAQ FOR CURRENT PAGE
    * =========================================================
-   *
-   * First check service FAQ.
-   * If it is not a service page,
-   * check blog FAQ.
    */
+
   const currentFaqPath = faqLinks[servicePath] || blogFaqLinks[servicePath];
 
   /*
@@ -124,6 +117,7 @@ const MainFooter = () => {
    * FOOTER ANIMATION
    * =========================================================
    */
+
   useEffect(() => {
     gsap.fromTo(
       gsap.utils.toArray(".X-axis-anm-footer"),
@@ -151,6 +145,7 @@ const MainFooter = () => {
    * ABOUT
    * =========================================================
    */
+
   const itemsAbout = [
     {
       name: "What is JEF",
@@ -175,6 +170,7 @@ const MainFooter = () => {
    * OUR BUSINESS
    * =========================================================
    */
+
   const itemsService = [
     {
       name: "Power System Studies",
@@ -211,6 +207,7 @@ const MainFooter = () => {
    * LOCATIONS
    * =========================================================
    */
+
   const itemsLocation = [
     {
       name: "India",
@@ -228,6 +225,7 @@ const MainFooter = () => {
    * INDUSTRIES
    * =========================================================
    */
+
   const itemsBusiness = [
     {
       name: "Oil and Gas",
@@ -260,6 +258,7 @@ const MainFooter = () => {
    * CAREERS
    * =========================================================
    */
+
   const itemsCareers = [
     {
       name: "Jobs",
@@ -273,14 +272,8 @@ const MainFooter = () => {
    * =========================================================
    *
    * Only show FAQ when the current page has an FAQ.
-   *
-   * This works for:
-   *
-   * Service page
-   * Blog page
-   * Service FAQ page
-   * Blog FAQ page
    */
+
   const itemsInternalLinks = currentFaqPath
     ? [
         {
@@ -289,6 +282,12 @@ const MainFooter = () => {
         },
       ]
     : [];
+
+  /*
+   * =========================================================
+   * MAIN FOOTER
+   * =========================================================
+   */
 
   return (
     <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
@@ -343,6 +342,7 @@ function Footer() {
   return (
     <footer className="card-slider-footer flex flex-col items-center pt-10 bg-stone-800">
       {/* Horizontal Line */}
+
       <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
 
       {/* =====================================================
@@ -356,6 +356,7 @@ function Footer() {
 
         <div className="flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">
           {/* YouTube */}
+
           <Link
             href="https://www.youtube.com/@JEFgroup"
             target="_blank"
@@ -366,6 +367,7 @@ function Footer() {
           </Link>
 
           {/* Facebook */}
+
           <Link
             href="https://www.facebook.com/JEFTECHNO/"
             target="_blank"
@@ -376,6 +378,7 @@ function Footer() {
           </Link>
 
           {/* LinkedIn */}
+
           <Link
             href="https://www.linkedin.com/showcase/jef-engineering-services-middle-east/"
             target="_blank"
@@ -386,6 +389,7 @@ function Footer() {
           </Link>
 
           {/* X / Twitter */}
+
           <Link
             href="https://x.com/JeftechnoIndia"
             target="_blank"
@@ -402,8 +406,9 @@ function Footer() {
       ====================================================== */}
 
       <div className="flex overflow-hidden flex-col justify-center items-center py-7 mt-6 w-screen text-white bg-stone-900 max-md:max-w-full">
-        <div className="flex X-axis-card-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
+        <div className="flex X-axis-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
           {/* Policies */}
+
           <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-[10px] sm:text-xs font-light basis-auto grow-0 tracking-widest">
             <Link href="/privacypolicy">Privacy Policy</Link>
 
@@ -413,6 +418,7 @@ function Footer() {
           </div>
 
           {/* Copyright */}
+
           <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
             Copyright 2025. All Rights Reserved © jeftechno | Production Company
             <Link
@@ -440,13 +446,15 @@ function Footer() {
 
 function Section({ title, items }) {
   return (
-    <section className="flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px]">
+    <section className="flex .card-slider-footer X-axis-anm-footer flex-col min-h-[234px] w-[219px]">
       {/* Section Title */}
+
       <header className="w-full text-xl font-bold tracking-widest text-[#FF0000] uppercase whitespace-nowrap">
         {title}
       </header>
 
       {/* Section Items */}
+
       <ul className="flex overflow-hidden font-light flex-col mt-4 w-full text-base leading-none text-gray-300">
         {items.map((item, index) => (
           <li
@@ -482,6 +490,7 @@ const FAQComponent = ({ currentFaqPath }) => {
      * ABOUT
      * =====================================================
      */
+
     {
       question: "ABOUT",
 
@@ -512,6 +521,7 @@ const FAQComponent = ({ currentFaqPath }) => {
      * OUR BUSINESS
      * =====================================================
      */
+
     {
       question: "Our Business",
 
@@ -554,6 +564,7 @@ const FAQComponent = ({ currentFaqPath }) => {
      * LOCATIONS
      * =====================================================
      */
+
     {
       question: "Locations",
 
@@ -580,6 +591,7 @@ const FAQComponent = ({ currentFaqPath }) => {
      * INDUSTRIES
      * =====================================================
      */
+
     {
       question: "Industries",
 
@@ -618,6 +630,7 @@ const FAQComponent = ({ currentFaqPath }) => {
      * CAREERS
      * =====================================================
      */
+
     {
       question: "Careers",
 
@@ -630,55 +643,97 @@ const FAQComponent = ({ currentFaqPath }) => {
 
       isOpen: false,
     },
-
-    /*
-     * =====================================================
-     * INTERNAL LINKS
-     *
-     * Only appears when current page has an FAQ.
-     * =====================================================
-     */
-    ...(currentFaqPath
-      ? [
-          {
-            question: "Internal Links",
-
-            content: [
-              {
-                label: "FAQ",
-                path: currentFaqPath,
-              },
-            ],
-
-            isOpen: false,
-          },
-        ]
-      : []),
   ]);
 
-  /* =====================================================
-     TOGGLE MOBILE FOOTER SECTIONS
-  ===================================================== */
+  /*
+   * =====================================================
+   * IMPORTANT FIX
+   *
+   * UPDATE INTERNAL LINKS WHEN CURRENT PAGE CHANGES
+   * =====================================================
+   *
+   * Example:
+   *
+   * Homepage:
+   * /
+   *
+   * currentFaqPath = undefined
+   *
+   * Then user clicks:
+   *
+   * Earthing Studies
+   *
+   * currentFaqPath becomes:
+   *
+   * /earthing-studies/faq
+   *
+   * This effect updates the mobile footer.
+   */
+
+  useEffect(() => {
+    setFaqData((prev) => {
+      // Remove existing Internal Links
+      const withoutInternalLinks = prev.filter(
+        (item) => item.question !== "Internal Links",
+      );
+
+      // No FAQ on current page
+      if (!currentFaqPath) {
+        return withoutInternalLinks;
+      }
+
+      // Add current page FAQ
+      return [
+        ...withoutInternalLinks,
+
+        {
+          question: "Internal Links",
+
+          content: [
+            {
+              label: "FAQ",
+              path: currentFaqPath,
+            },
+          ],
+
+          isOpen: false,
+        },
+      ];
+    });
+  }, [currentFaqPath]);
+
+  /*
+   * =====================================================
+   * TOGGLE MOBILE FOOTER SECTIONS
+   * =====================================================
+   */
 
   const toggleFAQ = (index) => {
-    setFaqData(
-      faqData.map((item, i) => ({
+    setFaqData((prev) =>
+      prev.map((item, i) => ({
         ...item,
         isOpen: i === index ? !item.isOpen : false,
       })),
     );
   };
 
-  /* =====================================================
-     MOBILE FAQ ITEM
-  ===================================================== */
+  /*
+   * =====================================================
+   * MOBILE FAQ ITEM
+   * =====================================================
+   */
 
   const FAQItem = ({ question, content, isOpen, onToggle }) => {
     const contentRef = useRef(null);
 
     const [height, setHeight] = useState(0);
 
-    /* Calculate content height */
+    /*
+     * =====================================================
+     * CALCULATE CONTENT HEIGHT
+     * =====================================================
+     */
+
     useEffect(() => {
       if (isOpen && contentRef.current) {
         setHeight(contentRef.current.scrollHeight);
@@ -691,7 +746,12 @@ const FAQComponent = ({ currentFaqPath }) => {
       }
     }, [isOpen]);
 
-    /* GSAP animation */
+    /*
+     * =====================================================
+     * GSAP ANIMATION
+     * =====================================================
+     */
+
     useEffect(() => {
       gsap.fromTo(
         gsap.utils.toArray(".X-axis-card-anm-footer"),
@@ -709,15 +769,19 @@ const FAQComponent = ({ currentFaqPath }) => {
 
           scrollTrigger: {
             trigger: ".card-slider-footer",
-
             start: "top 80%",
             end: "top 100%",
-
             toggleActions: "play none none none",
           },
         },
       );
     }, []);
+
+    /*
+     * =====================================================
+     * MOBILE FAQ ITEM RETURN
+     * =====================================================
+     */
 
     return (
       <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
@@ -787,9 +851,11 @@ const FAQComponent = ({ currentFaqPath }) => {
     );
   };
 
-  /* =====================================================
-     MOBILE FOOTER RETURN
-  ===================================================== */
+  /*
+   * =====================================================
+   * MOBILE FOOTER RETURN
+   * =====================================================
+   */
 
   return (
     <section className="flex overflow-hidden relative flex-col">
