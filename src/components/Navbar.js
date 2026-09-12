@@ -23,6 +23,7 @@ const Navbar = () => {
     const [hoverLine, setHoverLine] = useState('')
 
     const pathname = usePathname()
+    const isFaqPage = pathname?.endsWith('/faq')
     const toggleDropdown = () => setIsDropdownVisible(prev => !prev)
     const toggleSlideMenu = () => setIsSlideOpen(prev => !prev)
 
@@ -59,7 +60,7 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        if (activeSection || isSlideOpen) {
+        if ((activeSection && !isFaqPage) || isSlideOpen) {
             document.body.style.overflow = 'hidden'
         } else {
             document.body.style.overflow = ''
@@ -69,7 +70,7 @@ const Navbar = () => {
             document.body.style.overflow = ''
             if (resetTimeout) clearTimeout(resetTimeout)
         }
-    }, [activeSection, isSlideOpen, resetTimeout])
+    }, [activeSection, isFaqPage, isSlideOpen, resetTimeout])
 
     useEffect(() => {
         const handleScroll = () => {
