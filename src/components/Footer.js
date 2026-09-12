@@ -69,24 +69,16 @@ const MainFooter = () => {
     ];
 
     const faqPathByPage = {
-        '/': '/home/faq',
-        '/about-us': '/about-us/faq',
-        '/about-us/faq': '/about-us/faq',
-        '/leadership-team': '/leadership-team/faq',
-        '/leadership-team/faq': '/leadership-team/faq',
-        '/industries/renewableenergy': '/renewable-energy-grid-studies/faq',
-        '/renewable-energy-grid-studies/faq': '/renewable-energy-grid-studies/faq',
-        '/industries/oilandgas': '/electrical-engineering-oil-and-gas/faq',
-        '/electrical-engineering-oil-and-gas/faq': '/electrical-engineering-oil-and-gas/faq',
-        '/industries/powerutilities': '/power-utility-engineering-studies/faq',
-        '/power-utility-engineering-studies/faq': '/power-utility-engineering-studies/faq',
-        '/industries/manufacturingplant': '/manufacturing-plant-electrical-studies/faq',
-        '/manufacturing-plant-electrical-studies/faq': '/manufacturing-plant-electrical-studies/faq',
-        '/industries/processplant': '/process-plant-electrical-studies/faq',
-        '/process-plant-electrical-studies/faq': '/process-plant-electrical-studies/faq',
-        '/industries/commercialbuilding': '/commercial-building-electrical-safety/faq',
-        '/lightning-protection-studies': '/lightning-protection-studies/faq',
-        '/commercial-building-electrical-safety/faq': '/commercial-building-electrical-safety/faq',
+        '/': '/home/faqs',
+        '/about-us': '/about-us/faqs',
+        '/leadership-team': '/leadership-team/faqs',
+        '/industries/renewableenergy': '/industries/renewableenergy/faqs',
+        '/industries/oilandgas': '/industries/oilandgas/faqs',
+        '/industries/powerutilities': '/industries/powerutilities/faqs',
+        '/industries/manufacturingplant': '/industries/manufacturingplant/faqs',
+        '/industries/processplant': '/industries/processplant/faqs',
+        '/industries/commercialbuilding': '/industries/commercialbuilding/faqs',
+        '/lightning-protection-studies': '/lightning-protection-studies/faqs',
     };
 
     // Normalize the pathname so the FAQ link works with or without a trailing slash.
