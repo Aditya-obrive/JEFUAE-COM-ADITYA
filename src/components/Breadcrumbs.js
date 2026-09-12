@@ -6,6 +6,12 @@ import { usePathname } from 'next/navigation';
 const specialLabels = {
   faq: 'FAQs',
   faqs: 'FAQs',
+  renewableenergy: 'Renewable Energy',
+  oilandgas: 'Oil and Gas',
+  powerutilities: 'Power Utilities',
+  manufacturingplant: 'Manufacturing Plant',
+  processplant: 'Process Plant',
+  commercialbuilding: 'Commercial Building',
   'l&d-centre': 'L&D Centre',
   'smartdigitalization': 'Smart Digitalization',
 };
