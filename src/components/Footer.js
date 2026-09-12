@@ -83,12 +83,12 @@ const MainFooter = () => {
 
     // Normalize the pathname so the FAQ link works with or without a trailing slash.
     const normalizedPathname = pathname?.replace(/\/+$/, '') || '/';
-    const isFaqPage = normalizedPathname.endsWith('/faq');
+    const isFaqPage = normalizedPathname.endsWith('/faq') || normalizedPathname.endsWith('/faqs');
     const faqPath = faqPathByPage[normalizedPathname];
     const internalLinks = [
         {
             name: 'FAQs',
-            path: faqPath || '/html-sitemap',
+            path: isFaqPage ? null : (faqPath || '/html-sitemap'),
         },
     ];
 
