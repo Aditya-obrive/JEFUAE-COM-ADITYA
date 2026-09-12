@@ -84,13 +84,6 @@ export default function RenewableEnergyFaq({
   return (
     <main className="renewable-faq-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <section className="renewable-faq-hero" aria-label="Renewable energy grid studies FAQs">
-        <video className="renewable-faq-hero-video" autoPlay loop muted playsInline poster={poster}>
-          <source src={videoSource} type="video/mp4" />
-        </video>
-        <div className="renewable-faq-hero-overlay" />
-      </section>
-
       <nav className="renewable-faq-breadcrumb" aria-label="Breadcrumb">
         <Link href="/">HOME</Link>
         {showParentBreadcrumb && <><span>›</span><Link href={breadcrumbPath}>{breadcrumbLabel}</Link></>}

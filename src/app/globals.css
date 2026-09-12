@@ -258,7 +258,7 @@ button{
   text-align: left;
   width: 100%;
 }
-.renewable-faq-item button:hover { color: #b8c5d2; }
+.renewable-faq-item:hover { background: #1f2021; }
 .renewable-faq-chevron {
   border-bottom: 2px solid #ff0000;
   border-right: 2px solid #ff0000;
@@ -363,7 +363,7 @@ button{
   text-align: left;
   width: 100%;
 }
-.global-footer-faq-item button:hover { color: #b8c5d2; }
+.global-footer-faq-item:hover { background: #1f2021; }
 .global-footer-faq-item button span:last-child {
   color: #ff0000;
   font-size: 23px;
