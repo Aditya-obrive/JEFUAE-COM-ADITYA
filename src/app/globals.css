@@ -514,19 +514,42 @@ button{
 
   /* Keep the existing glyph harmless while drawing the reference chevron in CSS. */
   .footer-section-toggle > span:last-child {
-    border-bottom: 4px solid #e51b23;
-    border-right: 4px solid #e51b23;
+    border: 0;
     font-size: 0;
-    transform: rotate(45deg) translate(-3px, -3px);
+    position: relative;
+    transform: none;
     transition: transform .2s ease;
   }
 
+  .footer-section-toggle > span:last-child::before,
+  .footer-section-toggle > span:last-child::after {
+    background: #e51b23;
+    border-radius: 5px;
+    content: '';
+    height: 4px;
+    position: absolute;
+    top: 5px;
+    width: 18px;
+  }
+
+  .footer-section-toggle > span:last-child::before {
+    right: 50%;
+    transform: rotate(38deg);
+    transform-origin: right center;
+  }
+
+  .footer-section-toggle > span:last-child::after {
+    left: 50%;
+    transform: rotate(-38deg);
+    transform-origin: left center;
+  }
+
   .footer-section-toggle > span:last-child.is-open {
-    transform: rotate(225deg) translate(-3px, -3px);
+    transform: rotate(180deg);
   }
 
   .footer-section-toggle[aria-expanded="true"] > span:last-child {
-    transform: rotate(225deg) translate(-3px, -3px);
+    transform: rotate(180deg);
   }
 
   .footer-section ul {
