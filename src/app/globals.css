@@ -134,6 +134,7 @@ button{
   color: #f8f8f8;
   font-family: var(--font-montserrat), sans-serif;
   min-height: 100vh;
+  padding-top: 150px;
 }
 
 .renewable-faq-hero {
@@ -202,7 +203,7 @@ button{
   font-size: 13px;
   letter-spacing: 2px;
   min-height: 64px;
-  padding: 0 max(24px, calc((100% - 1280px) / 2));
+  padding: 0 max(24px, calc((100% - 1332px) / 2));
 }
 
 .renewable-faq-breadcrumb a:hover { color: #fff; }
@@ -210,8 +211,8 @@ button{
 
 .renewable-faq-content {
   margin: 0 auto;
-  max-width: 1600px;
-  padding: 92px 80px 125px;
+  max-width: 1332px;
+  padding: 84px 0 125px;
 }
 
 .renewable-faq-heading {
@@ -293,6 +294,7 @@ button{
 .renewable-faq-back:hover { background: #fff; color: #1f2021; }
 
 @media (max-width: 900px) {
+  .renewable-faq-page { padding-top: 100px; }
   .renewable-faq-hero { min-height: 480px; }
   .renewable-faq-hero-content { width: calc(100% - 48px); padding-bottom: 42px; }
   .renewable-faq-content { padding: 65px 24px 90px; }

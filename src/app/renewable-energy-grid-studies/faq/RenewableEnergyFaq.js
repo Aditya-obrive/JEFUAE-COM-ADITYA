@@ -80,6 +80,7 @@ export default function RenewableEnergyFaq({
       acceptedAnswer: { '@type': 'Answer', text: answer },
     })),
   };
+  const displayTitle = title.replace(/FAQS$/i, 'FREQUENTLY ASKED QUESTIONS');
 
   return (
     <main className="renewable-faq-page">
@@ -88,12 +89,12 @@ export default function RenewableEnergyFaq({
         <Link href="/">HOME</Link>
         {showParentBreadcrumb && <><span>›</span><Link href={breadcrumbPath}>{breadcrumbLabel}</Link></>}
         <span>›</span>
-        <span className="current">FAQs</span>
+        <span className="current">FAQ</span>
       </nav>
 
       <section className="renewable-faq-content">
         <div className="renewable-faq-heading">
-          <h2>{title}</h2>
+          <h2>{displayTitle}</h2>
         </div>
 
         <div className="renewable-faq-grid">
