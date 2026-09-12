@@ -134,7 +134,7 @@ button{
   color: #f8f8f8;
   font-family: var(--font-montserrat), sans-serif;
   min-height: 100vh;
-  padding-top: 150px;
+  padding-top: 160px;
 }
 
 /* Keep FAQ dropdown panels visible without changing the original navbar size. */
