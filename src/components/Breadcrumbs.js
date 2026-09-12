@@ -16,6 +16,8 @@ const specialLabels = {
   'smartdigitalization': 'Smart Digitalization',
 };
 
+const mainNavigationSlugs = new Set(['about-us', 'industries', 'our-business', 'business', 'blog', 'blogs']);
+
 function formatSegment(segment) {
   const decoded = decodeURIComponent(segment).replace(/([a-z])([A-Z])/g, '$1 $2');
   const normalized = decoded.replace(/[-_]+/g, ' ').trim();
@@ -35,10 +37,13 @@ export default function Breadcrumbs() {
   const segments = pathname.split('/').filter(Boolean);
   const breadcrumbSegments = pathname.toLowerCase() === '/home/faqs'
     ? [{ segment: 'faqs', href: '/home/faqs' }]
-    : segments.map((segment, index) => ({
-      segment,
-      href: `/${segments.slice(0, index + 1).join('/')}`,
-    }));
+    : segments
+      .map((segment, index) => ({
+        segment,
+        href: `/${segments.slice(0, index + 1).join('/')}`,
+        index,
+      }))
+      .filter(({ segment, index }) => !(index === 0 && mainNavigationSlugs.has(segment.toLowerCase())));
 
   return (
     <nav className="renewable-faq-breadcrumb" aria-label="Breadcrumb">
