@@ -165,8 +165,8 @@ const Navbar = () => {
                                         </Link>
                                     ) : (
                                         <button
-                                            onMouseEnter={isFaqPage ? undefined : () => handleMenuHover(item.label)}
-                                            onMouseLeave={isFaqPage ? undefined : handleMouseLeave}
+                                            onMouseEnter={() => handleMenuHover(item.label)}
+                                            onMouseLeave={handleMouseLeave}
                                             className="nav-item cursor-pointer uppercase md:text-xs xl:text-sm font-medium text-white tracking-[2px]"
                                         >
                                             {item.label}
@@ -175,8 +175,8 @@ const Navbar = () => {
                                     {item.hasDropdown && (
                                         <div className="flex cursor-pointer flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                                             <img
-                                                onMouseEnter={isFaqPage ? undefined : () => handleMenuHover(item.label)}
-                                                onMouseLeave={isFaqPage ? undefined : handleMouseLeave}
+                                                onMouseEnter={() => handleMenuHover(item.label)}
+                                                onMouseLeave={handleMouseLeave}
                                                 loading="lazy"
                                                 src="/HomePageImg/Dropdown.png"
                                                 alt="Dropdown"
