@@ -18,7 +18,6 @@ const routes = [
   '/instrumentation-earthing-studies',
   '/emi-emc',
   '/renewable-energy-grid-studies/faq',
-  '/electrical-engineering-consulting/faq',
   '/get-in-touch',
 ];
 
