@@ -69,7 +69,7 @@ const MainFooter = () => {
     ];
 
     const faqPathByPage = {
-        '/': '/electrical-engineering-consulting/faq',
+        '/': '/home/faq',
         '/electrical-engineering-consulting/faq': '/electrical-engineering-consulting/faq',
         '/about-us': '/about-us/faq',
         '/about-us/faq': '/about-us/faq',
