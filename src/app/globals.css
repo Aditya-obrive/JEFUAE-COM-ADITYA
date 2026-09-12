@@ -261,6 +261,8 @@ button{
   font-family: var(--font-montserrat), sans-serif;
   font-size: 20px;
   font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
   gap: 18px;
   justify-content: space-between;
   line-height: 1.5;
@@ -285,7 +287,10 @@ button{
   color: #9fb8d2;
   font-family: var(--font-montserrat), sans-serif;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 1.75;
+  letter-spacing: 0;
   margin: 0;
   padding: 27px 30px 31px;
 }
