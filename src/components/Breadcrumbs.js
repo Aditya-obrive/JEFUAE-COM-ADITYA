@@ -49,7 +49,7 @@ export default function Breadcrumbs() {
 
   return (
     <nav className="renewable-faq-breadcrumb" aria-label="Breadcrumb">
-      <Link href="/">HOME</Link>
+      <Link className="breadcrumb-home" href="/">HOME</Link>
       {breadcrumbSegments.map(({ segment, href }, index) => {
         const isCurrent = index === breadcrumbSegments.length - 1;
 

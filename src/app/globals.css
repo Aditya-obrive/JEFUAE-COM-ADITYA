@@ -213,6 +213,12 @@ button{
 }
 
 .renewable-faq-breadcrumb a:hover { color: #fff; }
+.renewable-faq-breadcrumb .breadcrumb-home {
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
 .renewable-faq-breadcrumb .current { color: #ff0000; }
 .renewable-faq-breadcrumb .breadcrumb-segment {
   align-items: center;
