@@ -583,8 +583,7 @@ const NavigationItem = ({ text, path, isActive }) => (
 
 const navigationItems = [
     { text: 'HOME', path: '/', isActive: false },
-    { text: 'INDUSTRIES', path: '/industries/renewableenergy', isActive: false },
-    { text: 'RENEWABLE ENERGY', path: '/industries/renewableenergy', isActive: true },
+    { text: 'RENEWABLE ENERGY', path: '/renewableenergy', isActive: true },
 ];
 
 const internalLinkItems = [
@@ -595,8 +594,8 @@ const internalLinkItems = [
     ['Instrumentation earthing', '/instrumentation-earthing-studies'],
     ['EMI EMC studies', '/emi-emc'],
     ['Root cause analysis', '/renewable-energy-grid-studies/faq/root-cause-analysis'],
-    ['Oil & Gas solutions', '/industries/oilandgas'],
-    ['Renewable Energy solutions', '/industries/renewableenergy'],
+    ['Oil & Gas solutions', '/oilandgas'],
+    ['Renewable Energy solutions', '/renewableenergy'],
     ['JEF UAE blog', '/blog'],
     ['About JEF UAE', '/about-us'],
     ['Leadership team', '/leadership-team'],

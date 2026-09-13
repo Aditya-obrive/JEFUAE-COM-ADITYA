@@ -1,12 +1,12 @@
 import Link from 'next/link';
 
 const industryLinks = [
-  ['Oil and Gas', '/industries/oilandgas'],
-  ['Power Utilities', '/industries/powerutilities'],
-  ['Manufacturing Plant', '/industries/manufacturingplant'],
-  ['Process Plant', '/industries/processplant'],
-  ['Commercial Buildings', '/industries/commercialbuilding'],
-  ['Renewable Energy', '/industries/renewableenergy'],
+  ['Oil and Gas', '/oilandgas'],
+  ['Power Utilities', '/powerutilities'],
+  ['Manufacturing Plant', '/manufacturingplant'],
+  ['Process Plant', '/processplant'],
+  ['Commercial Buildings', '/commercialbuilding'],
+  ['Renewable Energy', '/renewableenergy'],
 ];
 
 const serviceLinks = [

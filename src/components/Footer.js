@@ -56,12 +56,12 @@ const MainFooter = () => {
     ];
 
     const itemsBusiness = [
-        { name: 'Oil and Gas', path: '/industries/oilandgas' },
-        { name: 'Power Utilities', path: '/industries/powerutilities' },
-        { name: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
-        { name: 'Process Plant', path: '/industries/processplant' },
-        { name: 'Commercial Buildings', path: '/industries/commercialbuilding' },
-        { name: 'Renewable Energy', path: '/industries/renewableenergy' },
+        { name: 'Oil and Gas', path: '/oilandgas' },
+        { name: 'Power Utilities', path: '/powerutilities' },
+        { name: 'Manufacturing Plant', path: '/manufacturingplant' },
+        { name: 'Process Plant', path: '/processplant' },
+        { name: 'Commercial Buildings', path: '/commercialbuilding' },
+        { name: 'Renewable Energy', path: '/renewableenergy' },
     ];
 
     const itemsCareers = [
@@ -72,12 +72,12 @@ const MainFooter = () => {
         '/': '/home/faqs',
         '/about-us': '/about-us/faqs',
         '/leadership-team': '/leadership-team/faqs',
-        '/industries/renewableenergy': '/industries/renewableenergy/faqs',
-        '/industries/oilandgas': '/industries/oilandgas/faqs',
-        '/industries/powerutilities': '/industries/powerutilities/faqs',
-        '/industries/manufacturingplant': '/industries/manufacturingplant/faqs',
-        '/industries/processplant': '/industries/processplant/faqs',
-        '/industries/commercialbuilding': '/industries/commercialbuilding/faqs',
+        '/renewableenergy': '/renewableenergy/faqs',
+        '/oilandgas': '/oilandgas/faqs',
+        '/powerutilities': '/powerutilities/faqs',
+        '/manufacturingplant': '/manufacturingplant/faqs',
+        '/processplant': '/processplant/faqs',
+        '/commercialbuilding': '/commercialbuilding/faqs',
         '/lightning-protection-studies': '/lightning-protection-studies/faqs',
     };
 
@@ -277,12 +277,12 @@ const LegacyFAQComponent = () => {
         {
             question: "Industries",
             content: [
-                { label: 'Oil and Gas', path: '/industries/oilandgas' },
-                { label: 'Power Utilities', path: '/industries/powerutilities' },
-                { label: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
-                { label: 'Process Plant', path: '/industries/processplant' },
-                { label: 'Commercial Buildings', path: '/industries/commercialbuilding' },
-                { label: 'Renewable Energy', path: '/industries/renewableenergy' },
+                { label: 'Oil and Gas', path: '/oilandgas' },
+                { label: 'Power Utilities', path: '/powerutilities' },
+                { label: 'Manufacturing Plant', path: '/manufacturingplant' },
+                { label: 'Process Plant', path: '/processplant' },
+                { label: 'Commercial Buildings', path: '/commercialbuilding' },
+                { label: 'Renewable Energy', path: '/renewableenergy' },
             ],
             isOpen: false
         },

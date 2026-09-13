@@ -477,12 +477,12 @@ const IndustriesItem = ({ path, icon, text, isVisible }) => (
 function IndustriesComponent() {
 
     const Industries = [
-        { icon: '../AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/industries/oilandgas' },
-        { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/industries/powerutilities' },
-        { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
-        { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/industries/processplant' },
-        { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/industries/commercialbuilding' },
-        { icon: '../AboutUs/RenewableEnergy.png', text: 'Renewable Energy', path: '/industries/renewableenergy' },
+        { icon: '../AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/oilandgas' },
+        { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/powerutilities' },
+        { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/manufacturingplant' },
+        { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/processplant' },
+        { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/commercialbuilding' },
+        { icon: '../AboutUs/RenewableEnergy.png', text: 'Renewable Energy', path: '/renewableenergy' },
     ];
 
     return (
@@ -543,12 +543,12 @@ const FAQComponent = () => {
         {
             question: "Industries",
             content: [
-                { label: 'Oil and Gas', path: '/industries/oilandgas' },
-                { label: 'Power Utilites', path: '/industries/powerutilities' },
-                { label: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
-                { label: 'Process Plant', path: '/industries/processplant' },
-                { label: 'Commercial Buildings', path: '/industries/commercialbuilding' },
-                { label: 'Renewable Energy', path: '/industries/renewableenergy' }
+                { label: 'Oil and Gas', path: '/oilandgas' },
+                { label: 'Power Utilites', path: '/powerutilities' },
+                { label: 'Manufacturing Plant', path: '/manufacturingplant' },
+                { label: 'Process Plant', path: '/processplant' },
+                { label: 'Commercial Buildings', path: '/commercialbuilding' },
+                { label: 'Renewable Energy', path: '/renewableenergy' }
             ],
             isOpen: false,
         },
