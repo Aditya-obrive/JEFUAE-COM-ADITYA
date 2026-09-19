@@ -4,10 +4,23 @@ import React, { useState, useEffect } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import axios from "axios";
+import { usePathname } from 'next/navigation';
+import { resolveLocationRoute } from '@/lib/globalRouting';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactUs = () => {
+
+  const pathname = usePathname();
+  const [locale, setLocale] = useState('en');
+  const routeParts = pathname.split('/').filter(Boolean);
+  const locationContext = routeParts.length >= 3
+    ? resolveLocationRoute({ countrySlug: routeParts[0], citySlug: routeParts[1], serviceSlug: routeParts[2] })
+    : { country: null, city: null, service: null };
+  useEffect(() => {
+    const requestedLocale = new URLSearchParams(window.location.search).get('lang');
+    if (requestedLocale === 'ar' || requestedLocale === 'en') setLocale(requestedLocale);
+  }, []);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -53,6 +66,10 @@ const ContactUs = () => {
       projectLocation,
       serviceNeeded,
       message,
+      country: locationContext.country?.name || '',
+      city: locationContext.city?.name || '',
+      service: locationContext.service?.name || '',
+      language: locale,
     };
 
     toggleConfirmation();
@@ -130,6 +147,11 @@ const ContactUs = () => {
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
+              {locationContext.city && (
+                <p className="mb-6 max-w-[380px] text-xs leading-5 text-white/70">
+                  Enquiry context: {locationContext.country.name} · {locationContext.city.name}{locationContext.service ? ` · ${locationContext.service.name}` : ''} · {locale === 'ar' ? 'Arabic' : 'English'}
+                </p>
+              )}
               <div className="mb-6">
                 <label htmlFor="company" className="sr-only">Company</label>
                 <input type="text" id="company" name="company" placeholder="Company" className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200" onChange={(e) => setCompany(e.target.value)} />

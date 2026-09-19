@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const faqs = [
+export const faqs = [
   {
     question: "What is power system studies?",
     answer:

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { getCountry, getCity, getService } from '@/data/globalArchitecture';
 
 const specialLabels = {
   faq: 'FAQs',
@@ -37,6 +38,14 @@ export default function Breadcrumbs() {
   const segments = pathname.split('/').filter(Boolean);
 
   if (!segments.length) return null;
+  const isLocationRoute = segments.length >= 2 && getCountry(segments[0]) && getCity(segments[0], segments[1]);
+  const locationLabels = isLocationRoute ? [
+    { label: getCountry(segments[0]).name, href: `/${segments[0]}` },
+    { label: getCity(segments[0], segments[1]).name, href: `/${segments[0]}/${segments[1]}` },
+    ...(segments[2] && getService(segments[2]) ? [{ label: getService(segments[2]).name, href: `/${segments.slice(0, 3).join('/')}` }] : []),
+    ...(segments[3]?.toLowerCase() === 'faq' ? [{ label: 'FAQs', href: `/${segments.join('/')}` }] : []),
+  ] : null;
+  if (locationLabels) return <nav className="renewable-faq-breadcrumb" aria-label="Breadcrumb"><Link className="breadcrumb-home" href="/">HOME</Link>{locationLabels.map(({ label, href }, index) => <span className="breadcrumb-segment" key={href}><span aria-hidden="true">›</span><Link className={index === locationLabels.length - 1 ? 'current' : ''} href={href}>{label}</Link></span>)}</nav>;
   const breadcrumbSegments = pathname.toLowerCase() === '/home/faqs'
     ? [{ segment: 'faqs', href: '/home/faqs' }]
     : segments

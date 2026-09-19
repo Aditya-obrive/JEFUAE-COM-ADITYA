@@ -28,8 +28,11 @@ const routes = [
   '/get-in-touch',
 ];
 
+import { getLocationServiceParams } from '@/data/globalArchitecture';
+
 export default function sitemap() {
-  return routes.map((path) => ({
+  const locationRoutes = getLocationServiceParams().flatMap(({ country, city, service }) => [`/${country}/${city}`, `/${country}/${city}/${service}`, ...(service === 'power-system-studies' ? [`/${country}/${city}/${service}/faq`] : [])]);
+  return [...routes, ...locationRoutes].map((path) => ({
     url: `${siteUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: path === '/' || path === '/renewableenergy' ? 'monthly' : 'yearly',

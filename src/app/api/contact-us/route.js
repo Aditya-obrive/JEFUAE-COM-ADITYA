@@ -13,7 +13,7 @@ export async function POST(request) {
             return NextResponse.json({ error: 'Forbidden origin' }, { status: 403 })
         }
 
-        const { name, email, mobile, company, projectLocation, serviceNeeded, message } = await request.json()
+        const { name, email, mobile, company, projectLocation, serviceNeeded, message, country, city, service, language } = await request.json()
         const safeName = cleanText(name, 80)
         const safeEmail = cleanText(email, 254)
         const safeMobile = cleanText(mobile, 40)
@@ -21,6 +21,10 @@ export async function POST(request) {
         const safeProjectLocation = cleanText(projectLocation, 120)
         const safeServiceNeeded = cleanText(serviceNeeded, 160)
         const safeMessage = cleanText(message, 2000)
+        const safeCountry = cleanText(country, 120)
+        const safeCity = cleanText(city, 120)
+        const safeService = cleanText(service, 160)
+        const safeLanguage = cleanText(language, 20)
 
         if (!safeName || !safeEmail || !safeMobile) {
             return NextResponse.json({ error: 'All fields are required' }, { status: 400 })
@@ -52,7 +56,11 @@ export async function POST(request) {
         <strong>Phone Number:</strong> ${escapeHtml(safeMobile)}<br>
         <strong>Company:</strong> ${escapeHtml(safeCompany || 'Not provided')}<br>
         <strong>Project Location:</strong> ${escapeHtml(safeProjectLocation || 'Not provided')}<br>
-        <strong>Service Needed:</strong> ${escapeHtml(safeServiceNeeded || 'Not provided')}</p>
+        <strong>Service Needed:</strong> ${escapeHtml(safeServiceNeeded || 'Not provided')}<br>
+        <strong>Country:</strong> ${escapeHtml(safeCountry || 'Not provided')}<br>
+        <strong>City:</strong> ${escapeHtml(safeCity || 'Not provided')}<br>
+        <strong>Architecture Service:</strong> ${escapeHtml(safeService || 'Not provided')}<br>
+        <strong>Language:</strong> ${escapeHtml(safeLanguage || 'en')}</p>
         <p><strong>Message:</strong><br>${escapeHtml(safeMessage || 'Not provided')}</p>
         <p>Call up the client, Its urgent need you attention.</p>
         <p>Regards,<br>
